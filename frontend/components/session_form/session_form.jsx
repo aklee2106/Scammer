@@ -38,10 +38,12 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to BenchBnB!
+          This is coming from the session_form
           <br/>
-          Please {this.props.formType} or {this.props.navLink}
-          {this.renderErrors()}
+          
+          {/* Please {this.props.formType} or {this.props.navLink}
+          {this.renderErrors()} */}
+
           <div className="login-form">
             <br/>
             <label>Email:
