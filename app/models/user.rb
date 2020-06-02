@@ -1,3 +1,5 @@
+require 'bcrypt';
+
 class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true 
   validates :password_digest, :session_token, presence: true 
@@ -25,9 +27,10 @@ class User < ApplicationRecord
 
 
   def self.find_by_credentials(email, password)
+    
     user = User.find_by(email: email)
     return nil unless user
-
+    
     if user.is_password?(password)
       return user
     else
@@ -36,7 +39,7 @@ class User < ApplicationRecord
   end
 
   def is_password?(password)
-    Bcrypt::Password.new(self.password_digest).is_password?(password)
+    BCrypt::Password.new(self.password_digest).is_password?(password)
   end
 
   def self.generate_session_token
@@ -53,7 +56,7 @@ class User < ApplicationRecord
   end
 
   def reset_session_token!
-    self.sesion_token = self.class.generate_session_token
+    self.session_token = self.class.generate_session_token
     self.save
     self.session_token
   end
