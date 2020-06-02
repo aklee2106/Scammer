@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -36,6 +37,53 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    let formItem; 
+
+    if (this.props.formType === "Log In") {formItem = (
+      <div className="login-form">
+        <br/>
+        <label>Email Address
+          <br/>
+          <input type="text"
+            value={this.state.email}
+            onChange={this.update('email')}
+            className="login-input"
+          />
+        </label>
+        <br/>
+        <label>Password
+          <br/>
+          <input type="password"
+            value={this.state.password}
+            onChange={this.update('password')}
+            className="login-input"
+          />
+        </label>
+        <br/>
+        <a href="https://www.yammer.com/forgotten_password/new">Forgot password?</a>
+        <br/>
+        <input id="remember_me" type="checkbox"/>
+        <label for="remember_me" class="checkbox-label">Remember me</label>
+        <br/>
+        <input className="session-submit" type="submit" value={this.props.formType} />
+      </div>) 
+    } else {formItem = (
+      <div className="login-form">
+        <br/>
+        <label>Email Address
+          <br/>
+          <input type="text"
+            value={this.state.email}
+            onChange={this.update('email')}
+            className="login-input"
+          />
+        </label>
+        <br/>
+       <h4>Networks are private: a valid company email is required</h4>
+        <input className="session-submit" type="submit" value={this.props.formType} />
+      </div>) 
+    }
+
     return (
       <div className="login-form-container">
         <header className="login-header">
@@ -49,34 +97,9 @@ class SessionForm extends React.Component {
             
             {/* Please {this.props.formType} or {this.props.navLink}
             {this.renderErrors()} */}
+    
+            {formItem}
 
-            <div className="login-form">
-              <br/>
-              <label>Email Address
-                <br/>
-                <input type="text"
-                  value={this.state.email}
-                  onChange={this.update('email')}
-                  className="login-input"
-                />
-              </label>
-              <br/>
-              <label>Password
-                <br/>
-                <input type="password"
-                  value={this.state.password}
-                  onChange={this.update('password')}
-                  className="login-input"
-                />
-              </label>
-              <br/>
-              <a href="https://www.yammer.com/forgotten_password/new">Forgot password?</a>
-              <br/>
-              <input id="remember_me" type="checkbox"/>
-              <label for="remember_me" class="checkbox-label">Remember me</label>
-              <br/>
-              <input className="session-submit" type="submit" value={this.props.formType} />
-            </div>
           </form>
 
             <aside className="login-aside">
@@ -110,5 +133,6 @@ class SessionForm extends React.Component {
     );
   }
 }
+
 
 export default SessionForm;
