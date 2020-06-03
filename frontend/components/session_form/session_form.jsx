@@ -110,7 +110,7 @@ class SessionForm extends React.Component {
 
     return (
       <div className="login-form-container">
-        {/* {this.renderErrors()} */}
+        {this.renderErrors()}
         <header className="login-header">
           <h1>Yabber</h1>
           <h4>English (US) <i class="fas fa-globe"></i></h4>
