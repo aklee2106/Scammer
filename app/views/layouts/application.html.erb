@@ -4,11 +4,15 @@
     <title>Yabber</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous"> 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script type=“text/javascript”>
+      window.logo=“<%= image_url('msft_logo.png')%>”
+      window.logo2=“<%= image_url('logo.png')%>”
+    </script>
   </head>
-
+ 
   <body>
     <%= yield %>
   </body>
