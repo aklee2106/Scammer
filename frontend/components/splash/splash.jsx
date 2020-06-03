@@ -2,6 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class Splash extends React.Component {
+  constructor(props){
+    super(props);
+    this.demoLogin = this.demoLogin.bind(this);
+  }
+
+  demoLogin(e){
+    e.preventDefault();
+    this.props.login(this.props.user);    
+  }
+
   render (){
     return (
       <div className="splash-container">
@@ -28,7 +38,7 @@ class Splash extends React.Component {
               {/* <button className="splash-button">Buy Office 365</button>
               <button className="splash-button" id="log-in"><i class="fas fa-user"></i> Log In</button> */}
 
-              <Link className="splash-button">Demo</Link>
+              <button onClick={this.demoLogin} className="splash-button">Demo</button>
               <Link className="splash-button" id="log-in"
                  to="/login"><i class="fas fa-user"></i> Log In
               </Link>
