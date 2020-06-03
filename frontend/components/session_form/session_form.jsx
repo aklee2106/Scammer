@@ -26,32 +26,32 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return(
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
+      <div className="errors-modal">
+        {this.props.errors.map((error, i) => (    
+          <h2><i class="fas fa-exclamation-triangle"></i>{error}</h2>
         ))}
-      </ul>
+      </div>
     );
   }
 
   render() {
     let formItem; 
+    let asideItem;
 
     if (this.props.formType === "Log In") {formItem = (
       <div className="login-form">
         <br/>
-        <label>Email Address
+        <label className='form-label'>Email Address
           <br/>
           <input type="text"
             value={this.state.email}
             onChange={this.update('email')}
             className="login-input"
+            id="email-button"
           />
         </label>
         <br/>
-        <label>Password
+        <label className='form-label'>Password
           <br/>
           <input type="password"
             value={this.state.password}
@@ -60,12 +60,14 @@ class SessionForm extends React.Component {
           />
         </label>
         <br/>
-        <a href="https://www.yammer.com/forgotten_password/new">Forgot password?</a>
-        <br/>
-        <input id="remember_me" type="checkbox"/>
-        <label for="remember_me" class="checkbox-label">Remember me</label>
-        <br/>
-        <input className="session-submit" type="submit" value={this.props.formType} />
+        <a className="form-a" href="https://www.yammer.com/forgotten_password/new">Forgot password?</a>
+
+        <div className="form-bottom">
+          <input id="remember_me" type="checkbox"/>
+          <label for="remember_me" class="checkbox-label">Remember me</label>
+          <br/>
+          <input className="session-submit" type="submit" value={this.props.formType} />
+        </div>
       </div>) 
     } else {formItem = (
       <div className="login-form">
@@ -84,31 +86,43 @@ class SessionForm extends React.Component {
       </div>) 
     }
 
+    if (this.props.formType==="Log In"){
+      asideItem= (
+        <div className="login-aside">
+          <h4>Don't have an account?</h4>
+          <Link className="aside-links" to={'/signup'}>Sign Up</Link>
+          <h4>Want to learn more?</h4>
+          <a className="aside-links" href="https://www.microsoft.com/en-US/microsoft-365/yammer/yammer-overview">
+            See how Yammer helps you work better.</a>
+        </div>
+      )
+     } else {
+       asideItem = (
+        <div className="login-aside">
+        <h4>Already have an account?</h4>
+        <Link className="aside-links" to={'/login'}>Log In</Link>
+        <h4>Want to learn more?</h4>
+        <a className="aside-links" href="https://www.microsoft.com/en-US/microsoft-365/yammer/yammer-overview">
+          See how Yammer helps you work better.</a>
+        </div>
+       )
+      }
+
     return (
       <div className="login-form-container">
+        {/* {this.renderErrors()} */}
         <header className="login-header">
-          <h1>Yammer</h1>
-          <h4>English(US)</h4>
+          <h1>Yabber</h1>
+          <h4>English (US) <i class="fas fa-globe"></i></h4>
+          
         </header>
         <main className="login-content">
           <form onSubmit={this.handleSubmit} className="login-form-box">
-            <h2>Log In</h2>
-            <br/>
-            
-            {/* Please {this.props.formType} or {this.props.navLink}
-            {this.renderErrors()} */}
-    
+            <h2>{this.props.formType}</h2>          
             {formItem}
-
           </form>
 
-            <aside className="login-aside">
-              <h4>Don't have an account?</h4>
-              <Link to={'/signup'}>Sign Up</Link>
-              <h4>Want to learn more?</h4>
-              <a href="https://www.microsoft.com/en-US/microsoft-365/yammer/yammer-overview">
-                See how Yammer helps you work better.</a>
-            </aside>
+          {asideItem}
 
         </main>
 
