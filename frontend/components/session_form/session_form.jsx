@@ -24,15 +24,22 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
+ 
   renderErrors() {
-    // setTimeout(clearErrors(), 10000);
-    return(
-      <div className="errors-modal">
-        {this.props.errors.map((error, i) => (    
-          <h2><i className="fas fa-exclamation-triangle"></i>{error}</h2>
-        ))}
-      </div>
-    );
+    
+    if (this.props.errors !== []){
+      setTimeout(this.props.clearErrors, 10000);
+      return(
+        <div className="errors-modal">
+          {this.props.errors.map((error, i) => (    
+            <h2><i className="fas fa-exclamation-triangle"></i>{error}</h2>
+          ))}
+        </div>
+      );
+    } else {
+      return null;
+    }
+    
   }
 
   render() {

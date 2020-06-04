@@ -6,8 +6,8 @@ import {login} from '../../actions/session_actions';
 
 const mSTP = state => ({
   user: {
-    email: 'tieulam@cnn.com',
-    password: 'hunter12'
+    email: 'alex@microsoft.com',
+    password: '1234567'
   }
 }); 
 

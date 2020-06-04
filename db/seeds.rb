@@ -18,6 +18,6 @@ u1 = User.create!(
 )
 
 u2 = User.create!(
-  email: 'jesse@aa.com'
-  password: '123456'
+  email: 'jesse@aa.com',
+  password: 'hunter12'
 )
