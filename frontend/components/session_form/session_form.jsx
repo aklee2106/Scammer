@@ -72,7 +72,7 @@ class SessionForm extends React.Component {
 
         <div className="form-bottom">
           <input id="remember_me" type="checkbox"/>
-          <label for="remember_me" className="checkbox-label">Remember me</label>
+          <label  className="checkbox-label">Remember me</label>
           <br/>
           <input className="session-submit" type="submit" value={this.props.formType} />
         </div>
