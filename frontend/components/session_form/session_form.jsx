@@ -29,7 +29,7 @@ class SessionForm extends React.Component {
     return(
       <div className="errors-modal">
         {this.props.errors.map((error, i) => (    
-          <h2><i class="fas fa-exclamation-triangle"></i>{error}</h2>
+          <h2><i className="fas fa-exclamation-triangle"></i>{error}</h2>
         ))}
       </div>
     );
@@ -65,7 +65,7 @@ class SessionForm extends React.Component {
 
         <div className="form-bottom">
           <input id="remember_me" type="checkbox"/>
-          <label for="remember_me" class="checkbox-label">Remember me</label>
+          <label for="remember_me" className="checkbox-label">Remember me</label>
           <br/>
           <input className="session-submit" type="submit" value={this.props.formType} />
         </div>
@@ -114,7 +114,7 @@ class SessionForm extends React.Component {
         {this.renderErrors()}
         <header className="login-header">
           <h1>Yabber</h1>
-          <h4>English (US) <i class="fas fa-globe"></i></h4>
+          <h4>English (US) <i className="fas fa-globe"></i></h4>
           
         </header>
         <main className="login-content">
