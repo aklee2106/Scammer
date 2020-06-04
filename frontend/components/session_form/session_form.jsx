@@ -27,8 +27,8 @@ class SessionForm extends React.Component {
  
   renderErrors() {
     
-    if (this.props.errors !== []){
-      setTimeout(this.props.clearErrors, 10000);
+    if (this.props.errors.length){
+      setTimeout(this.props.clearErrors, 5000);
       return(
         <div className="errors-modal">
           {this.props.errors.map((error, i) => (    
