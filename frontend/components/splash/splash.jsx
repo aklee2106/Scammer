@@ -35,8 +35,7 @@ class Splash extends React.Component {
           <nav className="splash-content-nav">
             <h2>Yabber</h2>
             <div className="splash-button-div">
-              {/* <button className="splash-button">Buy Office 365</button>
-              <button className="splash-button" id="log-in"><i class="fas fa-user"></i> Log In</button> */}
+        
 
               <button onClick={this.demoLogin} className="splash-button">Demo</button>
               <Link className="splash-button" id="log-in"
