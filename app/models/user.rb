@@ -2,6 +2,7 @@ require 'bcrypt';
 
 class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true 
+  validates :email_cannot_be_personal
   validates :password_digest, :session_token, presence: true 
   validates :password, length: {minimum: 6}, allow_nil: true
 
@@ -24,7 +25,14 @@ class User < ApplicationRecord
   # # belongs_to :network,
   # #   foreign_key: :network_id,
   # #   class_name: :Network
+  personal_email_domains = ['gmail', 'yahoo', 'outlook', 'aol', 'hotmail', 'msn']
 
+  def email_cannot_be_personal 
+    if personal_email_domains.includes?(:email.split('@')[-1].split('.')[0])
+      errors.add(:email, "That looks like a personal email address.
+      Please Use your company email address so we can securely connect you with your network")
+    end
+  end
 
   def self.find_by_credentials(email, password)
     
