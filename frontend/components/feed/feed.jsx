@@ -1,7 +1,7 @@
 import React from 'react'; 
 import { Link } from 'react-router-dom';
 import ConversationFormContainer from './create_conversation_form_container';
-
+import ConversationIndexContainer from './conversation_index_container';
 
 class Feed extends React.Component{
 
@@ -49,12 +49,8 @@ class Feed extends React.Component{
                 <button>Praise</button>
               </div>
 
-
-              {ConversationFormContainer}
-              {/* <form className="feed-post-form">
-                <textarea name="form-text-area" cols="100" rows="10"></textarea>
-                <input type="submit" value='Post'/>    
-              </form> */}
+              <ConversationFormContainer />
+              
             </div>
 
             <div className="newsfeed-container">
@@ -64,15 +60,8 @@ class Feed extends React.Component{
                 <button>FOLLOWING</button>
               </div>
 
-              <div className="newsfeed-posts">
-                <ul>
-                  <li>example post</li>
-                  <li>example post</li>
-                  <li>example post</li>
-                  <li>example post</li>
-                  <li>example post</li> 
-                </ul>
-              </div>
+              <ConversationIndexContainer />
+
             </div>
 
           </div>

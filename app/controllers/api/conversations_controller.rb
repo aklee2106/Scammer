@@ -42,5 +42,6 @@ class Api::ConversationsController < ApplicationController
   def conversation_params
     params.require(:conversation).permit(:body)
   end
+  
 end
-end
+

@@ -11,6 +11,7 @@ class ConversationForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.action(this.state);
+    this.setState({body: ''});
   }
 
   update(field) {
@@ -20,15 +21,15 @@ class ConversationForm extends React.Component {
   render() {
     return (
       <div>
-        <h3>{this.props.formType}</h3>
-        <form onSubmit={this.handleSubmit}>git
+        <form onSubmit={this.handleSubmit} className="feed-post-form">
      
-          <textarea
+          <textarea className="form-text-area"
             value={this.state.body}
             onChange={this.update('body')}
           />
+         
+          <input type='submit' value='Post' />
 
-          <button type='submit' value={this.props.formType} />
         </form>
     </div>
     );
