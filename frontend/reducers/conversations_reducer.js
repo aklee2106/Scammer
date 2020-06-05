@@ -7,14 +7,14 @@ import {
 const ConversationsReducer = (state={}, action) =>{
   let newState = {}; 
   switch (action.type){
-    case RECEIVE_ALL_POSTS: 
-      return action.posts
-    case RECEIVE_POST: 
-      Object.assign(newState, state, {[action.post.id]: action.post})
+    case RECEIVE_ALL_CONVERSATIONS: 
+      return action.conversations
+    case RECEIVE_CONVERSATION: 
+      Object.assign(newState, state, {[action.conversation.id]: action.conversation})
       return newState; 
-    case REMOVE_POST: 
+    case REMOVE_CONVERSATION: 
       newState = Object.assign({}, state)
-      delete newState[action.postId];  
+      delete newState[action.conversationId];  
       return newState; 
     default: 
       return state; 

@@ -1,5 +1,7 @@
 import React from 'react'; 
 import { Link } from 'react-router-dom';
+import ConversationFormContainer from './create_conversation_form_container';
+
 
 class Feed extends React.Component{
 
@@ -46,10 +48,13 @@ class Feed extends React.Component{
                 <button>Poll</button>
                 <button>Praise</button>
               </div>
-              <form className="feed-post-form">
+
+
+              {ConversationFormContainer}
+              {/* <form className="feed-post-form">
                 <textarea name="form-text-area" cols="100" rows="10"></textarea>
                 <input type="submit" value='Post'/>    
-              </form>
+              </form> */}
             </div>
 
             <div className="newsfeed-container">

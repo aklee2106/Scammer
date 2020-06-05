@@ -1,9 +1,9 @@
 import React from 'react';
 
-class PostForm extends React.Component {
+class ConversationForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.post;
+    this.state = this.props.conversation;
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -22,18 +22,17 @@ class PostForm extends React.Component {
       <div>
         <h3>{this.props.formType}</h3>
         <form onSubmit={this.handleSubmit}>git
-          <label>
-            Body
-            <textarea
-              value={this.state.body}
-              onChange={this.update('body')}
-            />
-          </label>
+     
+          <textarea
+            value={this.state.body}
+            onChange={this.update('body')}
+          />
+
           <button type='submit' value={this.props.formType} />
         </form>
-      </div>
+    </div>
     );
   }
 }
 
-export default PostForm;
+export default ConversationForm;
