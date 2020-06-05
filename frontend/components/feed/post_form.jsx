@@ -21,7 +21,7 @@ class PostForm extends React.Component {
     return (
       <div>
         <h3>{this.props.formType}</h3>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>git
           <label>
             Body
             <textarea

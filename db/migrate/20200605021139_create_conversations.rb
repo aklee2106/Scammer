@@ -1,12 +1,10 @@
 class CreateConversations < ActiveRecord::Migration[5.2]
   def change
     create_table :conversations do |t|
-      t.string :name, null: false
       t.string :body, null: false
-      t.integer :author_id, null: false
-      t.integer :parent_convo_id, null: false
-      t.integer :group_id, null: false
-      t.timestamps
+      t.integer :author_id
+      t.integer :parent_convo_id
+      t.integer :group_id
       t.timestamps
     end
 

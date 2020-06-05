@@ -10,17 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_01_194328) do
+ActiveRecord::Schema.define(version: 2020_06_05_021139) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "conversations", force: :cascade do |t|
-    t.string "name", null: false
     t.string "body", null: false
-    t.integer "author_id", null: false
-    t.integer "parent_convo_id", null: false
-    t.integer "group_id", null: false
+    t.integer "author_id"
+    t.integer "parent_convo_id"
+    t.integer "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_id"], name: "index_conversations_on_author_id"
