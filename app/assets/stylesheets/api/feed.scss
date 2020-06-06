@@ -24,7 +24,7 @@
 
 
 
-.fas {
+.left-div > .fas, .feed-header-nav-icons > .fas {
   position: relative;
   margin-left: 5px;
   margin-right: 5px; 
@@ -44,7 +44,7 @@
   padding-left: 5px;
 }
 
-.fas:hover, .name-div:hover {
+.left-div >.fas:hover, .feed-header-nav-icons > .fas:hover {
   background-color: black;
 }
 
@@ -68,6 +68,7 @@
 .feed-main {
   width: 1000px;
   background-color: #fff;
+  margin-left: 40px;
 }
 
 .feed-content {
@@ -80,13 +81,36 @@
 
 .feed-post-form-container {
   margin-bottom: 50px;
-  border: 1px solid #dde0e6;
+  // border: 1px solid #dde0e6;
 }
 
 .feed-main-icons {
-  background-color: khaki;
+  margin-left: 40px;
 }
 
+.feed-main-icons > button {
+  border: none;
+  background: 0 0;
+  padding: 0;
+  margin: 0;
+  display: inline;
+  overflow: visible;
+  border-radius: 0;
+  font-family: Segoe UI WestEuropean,Segoe UI,Segoe UI Emoji,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  -webkit-appearance: button;
+  color: #646d7a;
+  font-weight: 400;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 7px;
+  padding: 0 0 10px 0;
+  position: relative;
+  white-space: nowrap;
+}
+
+.feed-main-icons > button:active {
+  color: #386cbb;
+}
 
 //form
 
@@ -102,11 +126,13 @@
   padding-right: 8px;
   display: flex;
   font-family: Segoe UI WestEuropean,Segoe UI,Segoe UI Emoji,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
-  outline: none;
+  // outline: none;
   user-select: text;
   white-space: pre-wrap;
   overflow-wrap: break-word;
   overflow-y: auto;
+  margin-left: 40px;
+  
 }
 
 .feed-post-form > input {
@@ -117,12 +143,6 @@
 }
 
 
-.newsfeed-convo-item {
-  height: 100px;
-  background-color: hotpink;
-  margin: 40px 5px;
-  list-style: none;
-}
 
 //right bar
 .feed-rightbar {

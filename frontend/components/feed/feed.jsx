@@ -43,10 +43,10 @@ class Feed extends React.Component{
 
             <div className="feed-post-form-container">
               <div className="feed-main-icons">
-                <button>Update</button>
-                <button>Question</button>
-                <button>Poll</button>
-                <button>Praise</button>
+                <button><i className="fas fa-comment-alt"></i> Update</button>
+                <button><i className="fas fa-question-circle"></i> Question</button>
+                <button><i className="fas fa-chart-bar"></i> Poll</button>
+                <button><i className="fas fa-trophy"></i> Praise</button>
               </div>
 
               <ConversationFormContainer />
