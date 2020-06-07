@@ -54,11 +54,12 @@ class Feed extends React.Component{
             </div>
 
             <div className="newsfeed-container">
-              <div className="newsfeed-tabs">
-                <button>DISCOVERY</button>
-                <button>ALL</button>
-                <button>FOLLOWING</button>
-              </div>
+              <ul className="newsfeed-tabs">
+                <li>DISCOVERY</li>
+                <li>ALL</li>
+                <li>FOLLOWING</li>
+              </ul>
+              <i className="fas fa-cog"></i>
 
               <ConversationIndexContainer />
 
