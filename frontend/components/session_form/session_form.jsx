@@ -89,6 +89,16 @@ class SessionForm extends React.Component {
           />
         </label>
         <br/>
+        <label className='form-label'>Password
+          <br/>
+          <input type="password"
+            value={this.state.password}
+            onChange={this.update('password')}
+            className="login-input"
+          />
+        </label>
+
+        <br/>
        <h4>Networks are private: a valid company email is required</h4>
         <input className="session-submit" type="submit" value={this.props.formType} />
       </div>) 

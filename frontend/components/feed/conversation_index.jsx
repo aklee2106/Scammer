@@ -17,7 +17,9 @@ class ConversationIndex extends React.Component {
           {
             conversations.map(conversation => (
              <ConversationIndexItem conversation={conversation}
-              key={conversation.id}/>
+              key={conversation.id}
+              authorId = {conversation.author_id}  
+            />
             ))
           }
         </ul>

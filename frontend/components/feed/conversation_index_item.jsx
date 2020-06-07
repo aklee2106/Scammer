@@ -7,7 +7,7 @@ const ConversationIndexItem = props => (
     <div className="convo-item-div">
       <i className="fas fa-user-circle"></i>
       <div className="newsfeed-convo-item">
-        <h3>First Last- {props.conversation.created_at}</h3>
+        <h3>- {props.conversation.created_at}</h3>
         <p>{props.conversation.body}</p>
       </div>
 

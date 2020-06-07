@@ -21,3 +21,12 @@ u2 = User.create!(
   email: 'jesse@aa.com',
   password: 'hunter12'
 )
+
+demo = User.create!(
+  email: 'jeff@amazon.com',
+  password: 'hunter12',
+  first_name: "Jeff",
+  last_name: "Bezos",
+  birthday: Date.new,
+  network_id: 10, 
+)

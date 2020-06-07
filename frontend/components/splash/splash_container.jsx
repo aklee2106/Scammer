@@ -5,9 +5,9 @@ import Splash from './splash';
 import {login} from '../../actions/session_actions';
 
 const mSTP = state => ({
-  user: {
-    email: 'alex@microsoft.com',
-    password: '1234567'
+  demoUser: {
+    email: 'jeff@amazon.com',
+    password: 'hunter12'
   }
 }); 
 
