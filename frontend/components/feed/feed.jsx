@@ -4,8 +4,12 @@ import ConversationFormContainer from './create_conversation_form_container';
 import ConversationIndexContainer from './conversation_index_container';
 
 class Feed extends React.Component{
+  componentDidMount(){
+    this.props.fetchUsers();
+  }
 
   render(){
+    // debugger
     return (
       <div className="feed-container">
         
@@ -26,7 +30,7 @@ class Feed extends React.Component{
                     <div className="account-div">
                       <h4>{this.props.currentUser.first_name} {this.props.currentUser.last_name}</h4>
                       <h4>{this.props.currentUser.email}</h4>
-                      <Link onClick={this.props.logout}>Log Out</Link>
+                      <Link onClick={this.props.logout} to="/login">Log Out</Link>
                     </div>
                     
                     

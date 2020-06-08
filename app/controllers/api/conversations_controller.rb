@@ -1,6 +1,7 @@
 class Api::ConversationsController < ApplicationController
   def index
     @conversations = Conversation.all
+    @users = User.all
   end
 
   def show

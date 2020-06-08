@@ -37,18 +37,18 @@ demo = User.create!(
 c1= Conversation.create!(
   body: "My name is Jesse- Do we get Memorial Day off?",
   author_id: u2.id,
-  created_at: Date.new, 
+  created_at: Date.new(2019,02,03), 
 )
 
 c2= Conversation.create!(
   body: "I am the founder of Amazon",
   author_id: demo.id,
-  created_at: Date.new, 
+  created_at: Date.new(2020,06,01), 
 )
 
 c3= Conversation.create!(
   body: "Hey everyone this is Alex",
   author_id: u1.id,
-  created_at: Date.new, 
+  created_at: Date.new(2020,05,20), 
 )
 

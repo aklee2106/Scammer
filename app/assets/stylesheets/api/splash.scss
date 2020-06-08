@@ -1,3 +1,10 @@
+.hide {
+  display: none;
+  height: 0px;
+  width: 0px;
+  font-size: 0px;
+  z-index: -10;
+}
 
 .splash-header {
   display: flex;

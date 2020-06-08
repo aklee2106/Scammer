@@ -9,9 +9,7 @@ import FeedContainer from './feed/feed_container';
 
 const App = () => (
   <div>
-    {/* <aside>
-      <GreetingContainer /> 
-    </aside> */}
+   
     <AuthRoute exact path='/' component={SplashContainer} />
     
   
