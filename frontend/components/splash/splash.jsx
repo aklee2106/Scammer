@@ -39,7 +39,7 @@ class Splash extends React.Component {
 
               <button onClick={this.demoLogin} className="splash-button">Demo</button>
               <Link className="splash-button" id="log-in"
-                 to="/login"><i class="fas fa-user"></i> Log In
+                 to="/login"><i className="fas fa-user"></i> Log In
               </Link>
   
             </div>

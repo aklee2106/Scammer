@@ -60,5 +60,5 @@ const receiveUsers = (users) => ({
 
 export const fetchUsers = () => dispatch => {
   return APIUtil.fetchUsers()
-      .then(payload => dispatch(receiveUsers(payload)))
+      .then(users => dispatch(receiveUsers(users)))
 }

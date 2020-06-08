@@ -5,8 +5,8 @@ import ConversationIndexItem from './conversation_index_item';
 
 class ConversationIndex extends React.Component {
   componentDidMount() {
+    // this.props.fetchUsers();
     this.props.fetchConversations();
-    this.props.fetchUsers();
   }
 
   render() {
@@ -19,7 +19,7 @@ class ConversationIndex extends React.Component {
             conversations.map(conversation => (
              <ConversationIndexItem conversation={conversation}
               key={conversation.id}
-              users={users}
+              // users={users}
             />
             ))
           }

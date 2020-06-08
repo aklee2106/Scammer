@@ -13,13 +13,13 @@ class Feed extends React.Component{
           <nav className="feed-header-nav">
             <div className="left-div">
               <i className="fas fa-th"></i>
-              <h3>Network Name, id:{this.props.user.network_id}</h3>
+              <h3>Network Name, id:{this.props.currentUser.network_id}</h3>
             </div>
             <div className="feed-header-nav-icons">
               <i className="fas fa-cog"></i>
               <i className="fas fa-question"></i>
               <div className="name-div">
-                <h4>{this.props.user.first_name} {this.props.user.last_name}</h4>
+                <h4>{this.props.currentUser.first_name} {this.props.currentUser.last_name}</h4>
                 <i className="far fa-user-circle"></i>
               </div>
             </div>

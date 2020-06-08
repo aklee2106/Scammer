@@ -5,7 +5,7 @@ import Feed from './feed';
 
 const mSTP = state => ({
   // network: state.email.split('@')[-1].split('.')[0]
-  user: state.entities.users[state.session.id]
+  currentUser: state.entities.users[state.session.id]
 });
 
 const mDTP = dispatch => ({

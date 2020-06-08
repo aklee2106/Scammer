@@ -9,13 +9,14 @@ class ConversationIndexItem extends React.Component {
   }
 
   render(){
-    debugger
+    // debugger
     return (
     <li className="newsfeed-convo-item-li">
       <div className="convo-item-div">
         <i className="fas fa-user-circle"></i>
         <div className="newsfeed-convo-item">
-          <h3>{this.props.users[this.props.conversation.author_id].first_name} 
+          <h3>
+            {this.props.conversation.author.first_name} {this.props.conversation.author.last_name}
            - {formatUploadTime(this.props.conversation.created_at)}
           </h3>
           <p>{this.props.conversation.body}</p>
