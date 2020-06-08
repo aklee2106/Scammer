@@ -15,17 +15,35 @@ class Feed extends React.Component{
               <i className="fas fa-th"></i>
               <h3>Network Name, id:{this.props.currentUser.network_id}</h3>
             </div>
+
             <div className="feed-header-nav-icons">
-              <i className="fas fa-cog"></i>
+              <div className='dropdown'>
+                <i className="fas fa-cog"></i>
+                <div className='dropdown-content'>
+                  <h1>My Account</h1>
+                  <div className="dropdown-signout-div">
+                    <i className="far fa-user-circle"></i>
+                    <div className="account-div">
+                      <h4>{this.props.currentUser.first_name} {this.props.currentUser.last_name}</h4>
+                      <h4>{this.props.currentUser.email}</h4>
+                      <Link onClick={this.props.logout}>Log Out</Link>
+                    </div>
+                    
+                    
+                  </div>
+
+                </div>
+              </div>
+            
               <i className="fas fa-question"></i>
               <div className="name-div">
                 <h4>{this.props.currentUser.first_name} {this.props.currentUser.last_name}</h4>
                 <i className="far fa-user-circle"></i>
               </div>
+              
             </div>
           </nav>
         </header>
-
 
         <div className="feed-content">
 

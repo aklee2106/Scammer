@@ -70,7 +70,7 @@ li > a:hover{
   text-decoration: none;
   height: auto; 
   font-size: 1rem;
-  line-height: 1.5;
+  // line-height: 1.5;
   text-align: left;
   // color: #fff;
   font-family: Segoe UI WestEuropean,Segoe UI,Segoe UI Emoji,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
@@ -147,3 +147,30 @@ li > a:hover{
   left: 40px;
   top: 20px; 
 }
+
+.splash-footer {
+  background-color: #f3f5f8;
+  height: 50px;
+  display: flex;
+  align-items: center; 
+  justify-content: flex-end;
+}
+
+.footer-links {
+  float: right; 
+  margin-right: 30px;
+  font-size: 20px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-footer li {
+  list-style: none;
+  // display: inline-block;
+  margin-right: 20px;
+
+}
+
+
+
