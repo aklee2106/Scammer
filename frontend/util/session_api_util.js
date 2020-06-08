@@ -24,26 +24,18 @@ export const logout = () => (
 
 
 
-// $.ajax({
-//   method: 'POST', 
-//   url: '/api/users',
-//   data: {user: {
-//     email: 'alex@work.com',
-//     password: 'hunter12'
-//   }}
-// }) 
+export const fetchUser = (userId) => {
+  return $.ajax({
+    url: `/api/users/${userId}`,
+    method: 'GET'
+  })
+}
 
-// $.ajax({
-//   method: 'POST', 
-//   url: '/api/session',
-//   data: {user: {
-//     email: 'alex@work.com',
-//     password: 'hunter12'
-//   }}
-// }) 
+export const fetchUsers = () => {
+  return $.ajax({
+    url: '/api/users',
+    method: 'GET'
+  })
+}
 
-// $.ajax({
-//   method: "DELETE",
-//   url: "/api/session",
-// }) 
 

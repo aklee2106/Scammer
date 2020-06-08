@@ -4,6 +4,7 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
+export const RECEIVE_USERS = 'RECEIVE_USERS';
 
 export const receiveCurrentUser = currentUser => ({
   type: RECEIVE_CURRENT_USER,
@@ -46,3 +47,18 @@ export const logout = () => dispatch => (
   ))
 );
 
+// export const fetchUser = (userId) => dispatch => {
+//   return APIUtil.fetchUser(userId)
+//       .then(payload => dispatch(receiveCurrentUser(payload)),
+//           err => dispatch(receiveSessionErrors(err.responseJSON)))
+// }
+
+const receiveUsers = (users) => ({
+    type: RECEIVE_USERS,
+    users
+})
+
+export const fetchUsers = () => dispatch => {
+  return APIUtil.fetchUsers()
+      .then(payload => dispatch(receiveUsers(payload)))
+}

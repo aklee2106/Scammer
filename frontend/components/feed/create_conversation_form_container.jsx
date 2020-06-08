@@ -5,9 +5,10 @@ import {createConversation} from '../../actions/conversation_actions';
 
 const mapStateToProps = state => ({
   conversation: {
-    body: ''
+    body: '',
+    author_id: state.session.id, 
   },
-  formType: 'Create Post'
+  formType: 'Create Post', 
 });
 
 const mapDispatchToProps = dispatch => ({

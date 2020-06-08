@@ -6,10 +6,11 @@ import ConversationIndexItem from './conversation_index_item';
 class ConversationIndex extends React.Component {
   componentDidMount() {
     this.props.fetchConversations();
+    this.props.fetchUsers();
   }
 
   render() {
-    const { conversations} = this.props;
+    const { conversations, users} = this.props;
 
     return (
       <div>
@@ -18,7 +19,7 @@ class ConversationIndex extends React.Component {
             conversations.map(conversation => (
              <ConversationIndexItem conversation={conversation}
               key={conversation.id}
-              authorId = {conversation.author_id}  
+              users={users}
             />
             ))
           }

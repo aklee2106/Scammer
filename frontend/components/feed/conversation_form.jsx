@@ -4,14 +4,15 @@ class ConversationForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.conversation;
-
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    // this.setState({author_id: this.props.conversation.author_id});
     this.props.action(this.state);
     this.setState({body: ''});
+    // debugger;
   }
 
   update(field) {

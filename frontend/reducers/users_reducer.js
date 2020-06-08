@@ -1,4 +1,4 @@
-import {RECEIVE_CURRENT_USER} from '../actions/session_actions';
+import {RECEIVE_CURRENT_USER, RECEIVE_USERS} from '../actions/session_actions';
 
 const usersReducer = (state={}, action) => {
   const newState = Object.assign({}, state); 
@@ -6,6 +6,8 @@ const usersReducer = (state={}, action) => {
     case RECEIVE_CURRENT_USER: 
       newState[action.currentUser.id] = action.currentUser;   
       return newState;
+    case RECEIVE_USERS: 
+      return action.payload; 
     default: 
       return state; 
   }

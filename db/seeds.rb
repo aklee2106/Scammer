@@ -19,7 +19,10 @@ u1 = User.create!(
 
 u2 = User.create!(
   email: 'jesse@aa.com',
-  password: 'hunter12'
+  password: 'hunter12',
+  first_name: "Jesse",
+  last_name: "Lin",
+  network_id: 2
 )
 
 demo = User.create!(
@@ -30,3 +33,22 @@ demo = User.create!(
   birthday: Date.new,
   network_id: 10, 
 )
+
+c1= Conversation.create!(
+  body: "My name is Jesse- Do we get Memorial Day off?",
+  author_id: u2.id,
+  created_at: Date.new, 
+)
+
+c2= Conversation.create!(
+  body: "I am the founder of Amazon",
+  author_id: demo.id,
+  created_at: Date.new, 
+)
+
+c3= Conversation.create!(
+  body: "Hey everyone this is Alex",
+  author_id: u1.id,
+  created_at: Date.new, 
+)
+
