@@ -211,7 +211,8 @@
   color: black; 
   height: 856px;
   width: 319px;
-  // text-align: center;
+  right: -165px;
+  text-align: center;
   font-family: UI WestEuropean,Segoe UI,Segoe UI Emoji,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
 }
 
@@ -244,6 +245,7 @@
 .dropdown-signout-div {
   background-color: white;
   padding: 14px 16px 15px; 
+  text-align: left; 
 }
 
 .account-div h4 {

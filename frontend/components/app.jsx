@@ -9,10 +9,10 @@ import FeedContainer from './feed/feed_container';
 
 const App = () => (
   <div>
-    <aside>
+    {/* <aside>
       <GreetingContainer /> 
-    </aside>
-    <Route exact path='/' component={SplashContainer} />
+    </aside> */}
+    <AuthRoute exact path='/' component={SplashContainer} />
     
   
     <AuthRoute exact path="/login" component={LoginFormContainer} />

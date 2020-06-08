@@ -127,11 +127,15 @@ class SessionForm extends React.Component {
       }
 
     return (
+      
       <div className="login-form-container">
-        {this.renderErrors()}
+        
         <header className="login-header">
-          <h1>Yabber</h1>
-          <h4>English (US) <i className="fas fa-globe"></i></h4>
+          {this.renderErrors()}
+          <div className="login-header-div">
+            <h1>Yabber</h1>
+            <h4>English (US) <i className="fas fa-globe"></i></h4>
+          </div>
           
         </header>
         <main className="login-content">
@@ -147,21 +151,16 @@ class SessionForm extends React.Component {
 
         <footer className="login-footer">
           <ul>
-            <li>About Us</li>
-            <li>Pricing</li>
-            <li>Apps</li>
-            <li>Developers</li>
-            <li>Jobs</li>
-            <li>Blog</li>
-            <li>Terms</li>
-            <li>Privacy & Cookies</li>
-            <li>Help</li>
+          
+            <li><a href="https://www.github.com/aklee2106"><i className="fab fa-github"></i> GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/aklee2106"><i className="fab fa-linkedin"></i> LinkedIn</a></li>
+            <li><a href="https://angel.co/u/alexander-k-lee"><i className="fab fa-angellist"></i> AngelList</a></li>
           </ul>
           <h3>Microsoft</h3>
         
         </footer>
-      
       </div>
+      
     );
   }
 }

@@ -154,12 +154,15 @@ li > a:hover{
   display: flex;
   align-items: center; 
   justify-content: flex-end;
+  // position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-links {
   float: right; 
   margin-right: 30px;
-  font-size: 20px; 
+  font-size: 25px; 
   display: flex;
   justify-content: center;
   align-items: center;

@@ -12,31 +12,36 @@
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   vertical-align: baseline;
-  height: 900px;
-  
+  height: auto;
+  background-color: rgb(228, 228, 228); 
 }
 
 .login-header {
   color: #0072c6;
   text-decoration: none;
   font-weight: 700;
-  // margin-left: 40px;
-  // letter-spacing: -1px;
   width: 100%;
+  margin-left: auto;
   min-height: 56px;
   position: relative;
   z-index: 6;
   margin: 0 auto;
-  // padding-top: 20px;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,.35);
+  // display: flex;
+  // justify-content: space-between;; 
+  background-color: whitesmoke;
+}
+.login-header-div{
+  width: 960px;
+  margin-left: auto;
   display: flex;
   justify-content: space-between;
-  // color: rgb(28, 81, 224); 
+  align-items: center;
 }
 
 .login-header h1 {
-  position: relative;
-  left: 40px;
+  // position: relative;
+  // left: 40px;
   font-weight: 100;
   font-size: 40px;
 }
@@ -78,6 +83,8 @@
   padding-left: 20px;
   margin-bottom: 300px;
   border-left: 1px solid gray;
+  padding-bottom: 200px;
+  margin-right: 20px;
 }
 
 #email-button {
@@ -102,19 +109,22 @@
   display: flex; 
   justify-content: space-between;
   background-color: rgb(228, 228, 228); 
-  height: 80%;
-  // font-weight: 100;
+  height: 100%;
+  width: 960px;
+  margin-left: auto;
 }
 
 .login-footer {
-  // color: rgb(28, 81, 224);
+  background-color: whitesmoke;
   display: flex; 
   justify-content: space-between;
+  // position: absolute; 
+  bottom: 0;
+  width: 100%;
 }
 
 .login-footer > ul {
   list-style-type: none;
-
 }
 
 .login-footer li {
@@ -124,6 +134,7 @@
 
 .login-footer h3 {
   color: gray;
+  margin-right: 20px;
 }
 
 .session-submit {
@@ -155,32 +166,9 @@
   left: 0;
   right: 0;
   width: 646px;
-  z-index: -1;
+  z-index: 5;
   box-shadow: 0 0 10px #646d7a;
   
-  // -moz-animation: cssAnimation 0s ease-in 5s forwards;
-  // /* Firefox */
-  // -webkit-animation: cssAnimation 0s ease-in 5s forwards;
-  // /* Safari and Chrome */
-  // -o-animation: cssAnimation 0s ease-in 5s forwards;
-  // /* Opera */
-  // animation: cssAnimation 0s ease-in 5s forwards;
-  // -webkit-animation-fill-mode: forwards;
-  // animation-fill-mode: forwards;
 }
-// @keyframes cssAnimation {
-//   to {
-//     width:0;
-//     height:0;
-//     overflow:hidden;
-//   }
-// }
-// @-webkit-keyframes cssAnimation {
-//   to {
-//     width:0;
-//     height:0;
-//     visibility:hidden;
-//   }
-// }
 
 
