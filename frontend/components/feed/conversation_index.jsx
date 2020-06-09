@@ -1,6 +1,6 @@
 import React from 'react';
 import ConversationIndexItem from './conversation_index_item';
-;
+
 
 
 class ConversationIndex extends React.Component {
@@ -31,6 +31,7 @@ class ConversationIndex extends React.Component {
             />
             ))
           }
+
         </ul>
         
       </div>

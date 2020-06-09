@@ -37,7 +37,7 @@ class ConversationIndexItem extends React.Component {
         <button><i className="fas fa-edit"></i> EDIT</button>
       </div>
       <CommentIndexContainer conversationId={this.props.conversation.id}/>
-      <CommentFormContainer conversationId={this.props.conversation.id}/>
+      
     </li>
     )
   }
