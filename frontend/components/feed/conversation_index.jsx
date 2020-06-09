@@ -1,6 +1,6 @@
 import React from 'react';
 import ConversationIndexItem from './conversation_index_item';
-
+import CommentFormContainer from '../comments/comment_form_container';
 
 
 class ConversationIndex extends React.Component {
@@ -31,7 +31,7 @@ class ConversationIndex extends React.Component {
             />
             ))
           }
-
+          
         </ul>
         
       </div>

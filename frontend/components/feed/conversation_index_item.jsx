@@ -38,6 +38,9 @@ class ConversationIndexItem extends React.Component {
       </div>
       <CommentIndexContainer conversationId={this.props.conversation.id}/>
       
+      <div id='form-li' className='comment-li'>
+        <CommentFormContainer conversationId={this.props.conversation.id}/>
+      </div>
     </li>
     )
   }

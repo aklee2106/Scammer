@@ -6,7 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.delete_all
+Conversation.destroy_all
+Group.destroy_all
+Network.destroy_all
+User.destroy_all
+
 
 u1 = User.create!(
   email: 'alex@microsoft.com',
@@ -51,6 +55,8 @@ c3= Conversation.create!(
   author_id: u1.id,
   created_at: Date.new(2020,05,20), 
 )
+
+
 
 n1 = Network.create!(
   name: 'Amazon'

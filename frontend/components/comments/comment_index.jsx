@@ -9,7 +9,7 @@ class CommentIndex extends React.Component{
 
   componentDidMount(){
     this.props.requestComments();
-    // debugger;
+    this.props.fetchConversations();
   }
 
   render(){
@@ -18,23 +18,23 @@ class CommentIndex extends React.Component{
 
     // const author = this.props.users[comment.author_id]
 
-    const filteredComments = comments.map(comment => (
+    const filteredComments = comments.filter(comment => (
       comment.conversation_id === conversationId
     )); 
       
     if (comments.length === 0) return null;
-
+    
     return (
       <div className="comment-index-div">
         <ul className="comment-index-ul">
           {
-            comments.map(comment => (
+            filteredComments.map(comment => (
               <li className="comment-li" key={comment.id}>
                 <div className="convo-item-div">
                   <i id="user-icon" className="fas fa-user-circle"></i>
                   <div className="comment-name-body">
                     <h3>
-                      First Last, 
+                      {users[comment.user_id].first_name} {users[comment.user_id].last_name}
                       - {formatUploadTime(comment.created_at)}
                     </h3>
                     <p>{comment.body}</p>
@@ -55,9 +55,7 @@ class CommentIndex extends React.Component{
               </li>
             ))
           }
-          <li id='form-li' className='comment-li'>
-            <CommentFormContainer conversationId={this.props.conversationId}/>
-          </li>
+    
         </ul>
       </div>
     )
