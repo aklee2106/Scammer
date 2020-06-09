@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {formatUploadTime} from '../../util/time_util';
+import CommentFormContainer from '../comments/comment_form_container';
+import CommentIndexContainer from '../comments/comment_index_container';
+
 
 class ConversationIndexItem extends React.Component {
   constructor (props){
@@ -33,7 +36,8 @@ class ConversationIndexItem extends React.Component {
         <button><i className="fas fa-share-alt"></i> SHARE</button>
         <button><i className="fas fa-edit"></i> EDIT</button>
       </div>
-
+      <CommentIndexContainer conversationId={this.props.conversation.id}/>
+      <CommentFormContainer conversationId={this.props.conversation.id}/>
     </li>
     )
   }

@@ -9,6 +9,7 @@ json.conversations do
   end
 end
 
+#does what we call it here have to match the action?
 json.users do 
   @users.each do |user|
     json.set! user.id do 

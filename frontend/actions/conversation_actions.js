@@ -8,7 +8,8 @@ const receiveAllConversations = ({conversations, users}) => {
   // debugger
   
   return {type: RECEIVE_ALL_CONVERSATIONS,
-  conversations, users
+  conversations,
+  users
   }
 }; 
 

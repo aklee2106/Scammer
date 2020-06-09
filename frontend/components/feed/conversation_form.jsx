@@ -27,6 +27,7 @@ class ConversationForm extends React.Component {
           <textarea className="form-text-area"
             value={this.state.body}
             onChange={this.update('body')}
+            placeholder="What are you working on?"
           />
          
           <input type='submit' value='Post' />

@@ -52,3 +52,17 @@ c3= Conversation.create!(
   created_at: Date.new(2020,05,20), 
 )
 
+n1 = Network.create!(
+  name: 'Amazon'
+)
+
+n2 = Network.create!(
+  name: 'Microsoft'
+)
+
+g1 = Group.create!(
+  name: 'CEO Corner',
+  admin_id: demo.id,
+  network_id: n1.id
+) 
+
