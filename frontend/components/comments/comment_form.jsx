@@ -38,7 +38,7 @@ class CommentForm extends React.Component {
   render(){
 
     return (
-      <div className="comment-form-div">
+      <div id='t' className="comment-form-div">
         <i className="fas fa-user-circle"></i>
         <button id="q" onClick={this.toggle} className="button-as-link2">Write a reply</button>
         

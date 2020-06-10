@@ -53,10 +53,13 @@ export const logout = () => dispatch => (
 //           err => dispatch(receiveSessionErrors(err.responseJSON)))
 // }
 
-const receiveUsers = (users) => ({
+const receiveUsers = (users) => {
+  debugger
+  return {
     type: RECEIVE_USERS,
-    users
-})
+      users
+  }  
+};
 
 export const fetchUsers = () => dispatch => {
   return APIUtil.fetchUsers()

@@ -13,6 +13,10 @@ class Feed extends React.Component{
 
   render(){
     // debugger
+    if (Object.values(this.props.users).length < 2) {
+      return null; 
+    }
+
     return (
       <div className="feed-container">
         
@@ -128,12 +132,12 @@ class Feed extends React.Component{
               <h4>SUGGESTED PEOPLE</h4>
               <div className='first-person'>
                 <i className="fas fa-user-circle"></i>
-                  <h5>Jesse Lin</h5>  
+                <h5>{this.props.users[2].first_name} {this.props.users[2].last_name}</h5>  
               </div>
               <button>Follow</button>
               <div className='second-person'>
                 <i className="fas fa-user-circle"></i>
-                <h5>Tiffany Chin</h5>
+                <h5>{this.props.users[1].first_name} {this.props.users[1].last_name}</h5>
 
               </div>
                 <button>Follow</button>

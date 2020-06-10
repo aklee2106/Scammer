@@ -49,7 +49,7 @@ h3 > h4 {
 //comment form
 
 .comment-form{
-  width: 370px;
+  // width: 370px;
   min-height: 80px;
   padding-bottom: 15px;
   padding-left: 8px;
@@ -58,14 +58,14 @@ h3 > h4 {
   user-select: text;
   white-space: pre-wrap;
   overflow-wrap: break-word;
-  margin-left: 40px;
+  // margin-left: 40px;
   display: none;
 }
 
 .comment-textarea{
-  width: 100%;
+  width: 510px;
   min-height: 80px;
-  margin-top: 12px;
+  margin-top: 20px;
   -webkit-writing-mode: horizontal-tb !important;
   text-rendering: auto;
   color: -internal-light-dark-color(black, white);
@@ -84,7 +84,6 @@ h3 > h4 {
   cursor: text;
   white-space: pre-wrap;
   overflow-wrap: break-word;
-  margin: 0em;
   font: 400 13.3333px Arial;
   border-width: 1px;
   border-style: solid;
@@ -104,7 +103,6 @@ h3 > h4 {
   padding-bottom: 7px;
   padding-left: 15px;
   cursor: default;
-  opacity: 0.5;
   border-color: rgb(56, 108, 187);
   border-radius: 2px;
   transition: all 0.05s ease-out 0s;
@@ -121,10 +119,11 @@ h3 > h4 {
   margin-right: 10px;
   display: flex;
   align-items: center;
-  height: 64px; 
-  width: 580px;
+  min-height: 64px; 
+  width: 584px;
   background-color: rgb(237, 239, 242);
   margin-left: 40px;
+  // justify-content: space-around;
 }
 
 .comment-index-div{
@@ -149,7 +148,7 @@ h3 > h4 {
   overflow: visible;
   font-family: Segoe UI WestEuropean,Segoe UI,Segoe UI Emoji,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
   -webkit-appearance: button;
-  margin-left: 40px;
+  margin-right: 20px;
 
 
   background-color: #fff;
