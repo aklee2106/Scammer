@@ -1,6 +1,9 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{ 
+  margin: 0;
+}
 
 .login-form-container {
   width: 100%;
@@ -21,7 +24,8 @@
   text-decoration: none;
   font-weight: 700;
   width: 100%;
-  margin-left: auto;
+  // margin-left: auto;
+  // margin-right: auto;
   min-height: 56px;
   position: relative;
   z-index: 6;
@@ -30,10 +34,12 @@
   // display: flex;
   // justify-content: space-between;; 
   background-color: whitesmoke;
+  padding-left: 30px;
 }
 .login-header-div{
   width: 960px;
   margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,6 +69,10 @@
 
 .session-submit{
   margin-top: 8px;
+}
+
+.session-submit:hover {
+  background-color: darkgreen;
 }
 
 .form-bottom {
@@ -112,6 +122,7 @@
   height: 100%;
   width: 960px;
   margin-left: auto;
+  margin-right: auto;
 }
 
 .login-footer {
