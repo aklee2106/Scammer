@@ -9,6 +9,8 @@ const usersReducer = (state={}, action) => {
       return newState;
     case RECEIVE_ALL_CONVERSATIONS: 
       return action.users;
+    // case RECEIVE_USERS: 
+    //   return action.users; 
     default: 
       return state; 
   }

@@ -4,8 +4,11 @@ import ConversationFormContainer from './create_conversation_form_container';
 import ConversationIndexContainer from './conversation_index_container';
 
 class Feed extends React.Component{
+
   componentDidMount(){
     this.props.fetchUsers();
+    // this.props.fetchConversations();
+    // debugger
   }
 
   render(){
@@ -17,7 +20,7 @@ class Feed extends React.Component{
           <nav className="feed-header-nav">
             <div className="left-div">
               <i className="fas fa-th"></i>
-              <h3>Network Name, id:{this.props.currentUser.network_id}</h3>
+              <img className="amazon-logo" src={window.amazon} />
             </div>
 
             <div className="feed-header-nav-icons">
@@ -26,7 +29,8 @@ class Feed extends React.Component{
                 <div className='dropdown-content'>
                   <h1>My Account</h1>
                   <div className="dropdown-signout-div">
-                    <i className="far fa-user-circle"></i>
+                    
+                    <i className="fas fa-user-circle"></i>
                     <div className="account-div">
                       <h4>{this.props.currentUser.first_name} {this.props.currentUser.last_name}</h4>
                       <h4>{this.props.currentUser.email}</h4>
@@ -42,7 +46,7 @@ class Feed extends React.Component{
               <i className="fas fa-question"></i>
               <div className="name-div">
                 <h4>{this.props.currentUser.first_name} {this.props.currentUser.last_name}</h4>
-                <i className="far fa-user-circle"></i>
+                <i className="fas fa-user-circle"></i>
               </div>
               
             </div>
@@ -52,13 +56,32 @@ class Feed extends React.Component{
         <div className="feed-content">
 
           <aside className="groups-bar">
-            <ul className="groups-ul">
-              <li>Math Lovers</li>
-              <li>Honor Society</li>
-              <li>All Company</li>
-            </ul>
-            <button>Create a group</button>
-            <button>Discover more groups</button>
+            <div className="top-div">
+
+              <div className="left-bar-icons">
+                <div className="left-icons">
+                  <i className="fas fa-home"></i>
+                  <i className="fas fa-envelope"></i>
+                  <i className="fas fa-bell"></i>
+                </div>
+                <i className="fas fa-cog"></i>
+              </div>
+              <div className="search-div">
+                <i className="fas fa-search"></i>
+                <input type="search" placeholder="Search" className="search-input"></input>
+              </div>
+              
+              <div className='add-groups'>
+                <h5>AMAZON GROUPS <i className="fas fa-plus"></i></h5>
+                <h5>Finance Team</h5>
+                <h5>CEO Corner</h5>
+                <h5>All Company</h5>
+                <h5 id='blue'><i className="fas fa-plus"></i> Create a group</h5>
+                <h5 id='blue'><i className="fas fa-users"></i> Discover more groups</h5>
+              </div>
+
+              
+            </div>
           </aside>
 
           <div className="feed-main">
@@ -76,11 +99,11 @@ class Feed extends React.Component{
             </div>
 
             <div className="newsfeed-container">
-              <ul className="newsfeed-tabs">
+              <div className="newsfeed-tabs">
                 <li>DISCOVERY</li>
                 <li>ALL</li>
                 <li>FOLLOWING</li>
-              </ul>
+              </div>
               <i className="fas fa-cog"></i>
 
               <ConversationIndexContainer />
@@ -90,18 +113,49 @@ class Feed extends React.Component{
           </div>
 
           <aside className="feed-rightbar">
-            <div>
+
+            <div className='rightbar-top-div'>
               <h4>INVITE YOUR COWORKERS</h4>
-              <p>Yammer works best when your team is here too.</p>
+              <div>
+                <i className="fas fa-envelope-open-text"></i>
+                <p>Yammer works best when your team is here too.</p>
+              </div>
               <button>Invite them now</button>
             </div>
-            <div>
+
+
+            <div className="suggested-people-div">
               <h4>SUGGESTED PEOPLE</h4>
-              <div>Jesse Lin</div>
+              <div className='first-person'>
+                <i className="fas fa-user-circle"></i>
+                  <h5>Jesse Lin</h5>  
+              </div>
+              <button>Follow</button>
+              <div className='second-person'>
+                <i className="fas fa-user-circle"></i>
+                <h5>Tiffany Chin</h5>
+
+              </div>
+                <button>Follow</button>
             </div>
-            <div>
+
+            <div className="suggested-groups">
               <h4>SUGGESTED GROUPS</h4>
+
+              <div className="first-group">
+                <i className="fas fa-chart-line"></i>
+                <h5>Finance</h5>
+              </div>
+                <button>Join</button>
+
+              <div className="second-group">
+                <i className="fas fa-chart-pie"></i>
+                <h5>CEO Corner</h5>
+              </div>
+                <button>Join</button>
+
             </div>
+
           </aside>
 
         </div>

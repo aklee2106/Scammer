@@ -8,8 +8,9 @@ import CommentIndexContainer from '../comments/comment_index_container';
 class ConversationIndexItem extends React.Component {
   constructor (props){
     super(props);
-
   }
+
+
 
   render(){
     // debugger
@@ -20,7 +21,7 @@ class ConversationIndexItem extends React.Component {
         <div className="newsfeed-convo-item">
           <h3>
             {this.props.users[this.props.conversation.author_id].first_name} {this.props.users[this.props.conversation.author_id].last_name}
-           - {formatUploadTime(this.props.conversation.created_at)}
+           <h4> - {formatUploadTime(this.props.conversation.created_at)}</h4>
           </h3>
           <p>{this.props.conversation.body}</p>
         </div>
@@ -38,9 +39,9 @@ class ConversationIndexItem extends React.Component {
       </div>
       <CommentIndexContainer conversationId={this.props.conversation.id}/>
       
-      <div id='form-li' className='comment-li'>
-        <CommentFormContainer conversationId={this.props.conversation.id}/>
-      </div>
+      
+      <CommentFormContainer conversationId={this.props.conversation.id}/>
+    
     </li>
     )
   }

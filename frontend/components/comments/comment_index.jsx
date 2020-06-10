@@ -35,7 +35,7 @@ class CommentIndex extends React.Component{
                   <div className="comment-name-body">
                     <h3>
                       {users[comment.user_id].first_name} {users[comment.user_id].last_name}
-                      - {formatUploadTime(comment.created_at)}
+                      <h4>- {formatUploadTime(comment.created_at)}</h4>
                     </h3>
                     <p>{comment.body}</p>
                   </div>

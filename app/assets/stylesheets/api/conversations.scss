@@ -1,6 +1,3 @@
-// Place all the styles related to the api/conversations controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
 //conversationIndexItem styling
 
@@ -9,11 +6,14 @@
   // border: 1px solid gray;
   margin-bottom: 48px;
   list-style: none;
+  // padding-top: 10px;
 }
 
 .convo-item-div {
   display: flex;
-  margin-top: 10px;
+  margin-top: 2px;
+  padding-top: 15px;
+  // align-items: center;
 }
 
 
@@ -21,14 +21,14 @@
   // position: relative;
   // right: 30px;
   font-size: 40px;
-  margin-right: 10px;
+  margin-right: 15px;
   color: #ffb900; 
 }
 
 .newsfeed-convo-item {
   width: 100%;
   // float: left;
-  height: 100px;
+  height: 80px;
   background-color:white;
   // margin: 40px 5px;
   color: #343a41; 
@@ -37,16 +37,23 @@
 .newsfeed-convo-item > h3 {
   margin: 0;
   color: #646d7a;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 20px;
   font-family: Segoe UI WestEuropean,Segoe UI,Segoe UI Emoji,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
 }
 
+.newsfeed-convo-item > p {
+  font-size: 15px;
+  font-family: Segoe UI WestEuropean,Segoe UI,Segoe UI Emoji,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+} 
+
+
 .convo-index-item-buttons {
   width: 448px;
   height: 21px;
-  margin-left: 40px;
+  margin-left: 60px;
   margin-bottom: 2px;
+  padding-bottom: 5px;
 }
 
 .convo-index-item-buttons > button {
@@ -69,3 +76,25 @@
   border-radius: 0;
   font-family: Segoe UI WestEuropean,Segoe UI,Segoe UI Emoji,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
 }
+
+.button-as-link{
+  background-color: #fff;
+  border: 1px solid #dde0e6;
+  color: #646d7a;
+  display: block;
+  font-size: 1.5rem;
+  line-height: 5.5rem;
+  padding: 0 4px 0 14px;
+  text-decoration: none;
+  width: 80%;
+  text-align: left;
+  height: 57px;
+  background: 0 0;
+  font: inherit;
+  cursor: pointer;
+  overflow: visible;
+  font-family: Segoe UI WestEuropean,Segoe UI,Segoe UI Emoji,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  -webkit-appearance: button;
+  margin-left: 40px;
+}
+  

@@ -5,29 +5,44 @@ class ConversationForm extends React.Component {
     super(props);
     this.state = this.props.conversation;
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.toggle = this.toggle.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    // this.setState({author_id: this.props.conversation.author_id});
     this.props.action(this.state);
     this.setState({body: ''});
-    // debugger;
   }
 
   update(field) {
     return e => this.setState({ [field]: e.currentTarget.value });
   }
 
+  toggle(){
+    const x = document.getElementById("x");
+    const y = document.getElementById('y');
+
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      y.style.display = "none";
+    } else {
+      x.style.display = "none";
+      y.style.display = "block";
+    }
+  }
+
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit} className="feed-post-form">
+
+        <button id="x" onClick={this.toggle} className="button-as-link">What are you working on?</button>
+        
+        <form id="y"onSubmit={this.handleSubmit} className="feed-post-form">
      
-          <textarea className="form-text-area"
+          <textarea onBlur={this.toggle} className="form-text-area"
             value={this.state.body}
             onChange={this.update('body')}
-            placeholder="What are you working on?"
+        
           />
          
           <input type='submit' value='Post' />

@@ -1,13 +1,18 @@
 .feed-header-nav {
-  background-color: green; 
+  background-color: #146eb4; 
   width: 100%;
   height: 50px;
   color: white;
 }
 
+.amazon-logo {
+  width: 12%; 
+}
+
 .feed-header-nav {
   display: flex; 
   justify-content: space-between;
+  align-items: center;
 }
 
 .feed-header-nav-icons {
@@ -18,18 +23,16 @@
 
 .left-div{
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 
 
 .left-div > .fas, .feed-header-nav-icons > .fas {
-  position: relative;
+  // position: relative;
   margin-left: 5px;
   margin-right: 5px; 
   padding: 16px 10px;
-  
 }
 
 .far {
@@ -42,6 +45,7 @@
   align-items: center;
   height: 48px;
   padding-left: 5px;
+  font-family: SegoeUI-SemiLight-final,Segoe UI Semilight,SegoeUI-Regular-final,Segoe UI,"Segoe UI Web (West European)",Segoe,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Tahoma,Helvetica,Arial,sans-serif;
 }
 
 .left-div >.fas:hover, .feed-header-nav-icons > .fas:hover {
@@ -50,13 +54,27 @@
 
 .name-div > h4 {
   margin-right: 5px;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .groups-bar {
-  width: 200px;
-  background-color: lightgray;
-  min-height: 1073px;
+  min-width: 200px;
+  max-width: 280px;
+  background-color: rgb(237, 239, 242);
   margin: none;
+  color:  #646d7a; 
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-family: Segoe UI WestEuropean,Segoe UI,Segoe UI Emoji,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  vertical-align: baseline;
 }
 
 .groups-ul > li {
@@ -66,7 +84,7 @@
 //FEED CONTENT STYLING
 
 .feed-main {
-  width: 1000px;
+  width: 670px;
   background-color: #fff;
   margin-left: 40px;
 }
@@ -74,7 +92,6 @@
 .feed-content {
   display: flex;
   justify-content: space-around;
-  margin-top: 5px;
 }
 
 
@@ -86,6 +103,7 @@
 
 .feed-main-icons {
   margin-left: 40px;
+  margin-top: 10px;
 }
 
 .feed-main-icons > button {
@@ -115,7 +133,8 @@
 //form
 
 .feed-post-form{
-  width: 666px;
+  display: none;
+  // width: 666px;
   min-height: 100px;
   padding-bottom: 15px;
   padding-left: 8px;
@@ -133,18 +152,27 @@
 .form-text-area{
   width: 666px;
   min-height: 100px;
-  // padding-bottom: 15px;
-  // padding-left: 8px;
-  // padding-right: 8px;
-  // display: flex;
-  // font-family: Segoe UI WestEuropean,Segoe UI,Segoe UI Emoji,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
-  // // outline: none;
-  // user-select: text;
-  // white-space: pre-wrap;
-  // overflow-wrap: break-word;
-  // overflow-y: auto;
-  // margin-left: 40px;
   
+  background-color: #fff;
+  border: 1px solid #dde0e6;
+  color: #646d7a;
+  display: block;
+  // font-size: 1.5rem;
+  // line-height: 5.5rem;
+  padding: 5px 4px 0 14px;
+  text-decoration: none;
+  width: 100%;
+  text-align: left;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: -internal-light-dark-color(buttontext, rgb(170, 170, 170));
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  cursor: default;
+  font: 400 18px Arial;
 }
 
 .feed-post-form > input {
@@ -158,12 +186,13 @@
   padding-bottom: 7px;
   padding-left: 15px;
   cursor: default;
-  opacity: 0.5;
+  // opacity: 0.5;
   border-color: rgb(56, 108, 187);
   border-radius: 2px;
   transition: all 0.05s ease-out 0s;
   border-width: 1px;
   border-style: solid;
+  margin-top: 7px;
 }
 
 
@@ -171,20 +200,134 @@
 //right bar
 .feed-rightbar {
   background-color: #fff; 
-  width: 240px;
+  // min-width: 184px;
+  width: 224px;
   margin: 0 10px;
+  height: 630px;
+  font-family: Segoe UI WestEuropean,Segoe UI,Segoe UI Emoji,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  color: #343a41; 
+  margin-top: 5px;
+  margin-left: 30px;
+}
+
+.feed-rightbar h4 {
+  // margin: 0 0 9px;
+  // padding: 0 0 4px; 
+  font-size: 12px;
+  width: 184px;
+  height: 21px; 
+  color: #343a41;
+  border-bottom: 1px solid #dde0e6;
+  font-weight: 600;
+  font-family: Segoe UI WestEuropean,Segoe UI,Segoe UI Emoji,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.feed-rightbar p {
+  margin-left: 5px;
+  width: 124px;
+  height: 60px;
+  display: inline-block;
+  
+}
+
+.rightbar-top-div{
+  // margin-bottom: 20px;
+}
+
+.feed-rightbar button {
+  margin-right: 20px;
+  float: right; 
+  font-family: Segoe UI WestEuropean,Segoe UI,Segoe UI Emoji,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 12px;
+  color: rgb(56, 108, 187);
+  background-color: rgb(255, 255, 255);
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  padding-top: 4px;
+  padding-right: 9px;
+  padding-bottom: 6px;
+  padding-left: 9px;
+  cursor: pointer;
+  opacity: 1;
+  border-color: rgb(221, 224, 230);
+  border-radius: 2px;
+  transition: all 0.05s ease-out 0s;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.feed-rightbar p {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  margin-left: 10px;
+  
+}
+
+.suggested-people-div, .suggested-groups {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.suggested-people-div .fa-user-circle {
+  font-size: 25px;
+  color: palevioletred; 
+}
+
+.suggested-people-div h5, .suggested-groups h5{
+  margin: 0; 
+  display: inline-block;
+}
+
+.suggested-people-div div, .suggested-groups div {
+  // margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.suggested-people-div button, .suggested-groups button {
+  
+  width: 55px;
+  text-align: center; 
+  float: none;
+  margin-left: 35px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.suggested-groups .fa-chart-line, .fa-chart-pie {
+  font-size: 25px;
+  color: limegreen; 
+  margin-right:10px;
 }
 
 
 
+
+//newsfeed
+.newsfeed-container {
+  width: 664px;
+}
+
 .newsfeed-tabs {
-  width: 620px;
+  width: 95%;
   border-bottom: 1px solid #dde0e6;
   margin-right: none;
   display: inline-block;
   padding-left: none;
 }
 
+.fa-envelope-open-text {
+  font-size: 50px;
+}
 
 .newsfeed-tabs > li {
   display: inline-block;
@@ -262,4 +405,91 @@
 
 .account-div h4 {
   margin: 0;
+}
+
+//left bar
+.top-div {
+  padding-top: 5px;
+
+}
+
+.left-bar-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  color:  #646d7a;
+}
+
+.left-icons > i {
+  padding: 5px;
+  border: 1px solid gainsboro;
+  margin-right: 5px;
+}
+
+.left-icons > i:hover {
+  background-color:  #646d7a;
+  color: white;
+}
+
+.search-div {
+  display: flex;
+  justify-content: center;
+  margin-left: 10px; 
+  background-color: white;
+  margin-right: 10px;
+  height: 32px;
+  align-items: center;
+}
+
+.search-input {
+  margin-left: 10px;
+  // width: 140px;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: -internal-light-dark-color(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  -webkit-appearance: textfield;
+  background-color: -internal-light-dark-color(rgb(255, 255, 255), rgb(59, 59, 59));
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  border: none;
+}
+
+.add-groups {
+  padding-top: 16px;
+}
+
+.add-groups h5:first-child {
+  color: #495361;
+  font-weight: 600; 
+  font-size: 12px;
+  padding-bottom: 8px;
+}
+
+.add-groups > h5:hover {
+  background-color: lightgray; 
+}
+
+.add-groups h5 {
+  font-size: 14px;
+  color: #343a41;
+  font-family: Segoe UI WestEuropean,Segoe UI,Segoe UI Emoji,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 3px 16px;
+  vertical-align: baseline;
+  margin-bottom: 4px;
+}
+
+#blue {
+  color: #386bbb;
 }

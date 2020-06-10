@@ -8,7 +8,9 @@
   margin-bottom: 3px;
   list-style: none;
   height: auto;
+
 }
+
 
 .comment-name-body {
   background-color: rgb(237, 239, 242);
@@ -20,11 +22,28 @@
   font-size: 12px;
   line-height: 20px;
   font-family: Segoe UI WestEuropean,Segoe UI,Segoe UI Emoji,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 15px;
 }
+
+.comment-name-body > p {
+  font-family: Segoe UI WestEuropean,Segoe UI,Segoe UI Emoji,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 15px;
+  color: #343A41;
+}
+
+h3 > h4 {
+  display: inline-block;
+  font-size: 14px;
+  color: #646D7A;
+  font-weight: 400;
+  margin: 0;
+}
+
 
 #user-icon {
   font-size: 32px; 
-
+  margin-left: 15px;
+  
 }
 
 //comment form
@@ -40,6 +59,7 @@
   white-space: pre-wrap;
   overflow-wrap: break-word;
   margin-left: 40px;
+  display: none;
 }
 
 .comment-textarea{
@@ -99,4 +119,43 @@
 }
 .comment-form-div {
   margin-right: 10px;
+  display: flex;
+  align-items: center;
+  height: 64px; 
+  width: 580px;
+  background-color: rgb(237, 239, 242);
+  margin-left: 40px;
+}
+
+.comment-index-div{
+  margin-top: 10px;
+}
+
+.button-as-link2 {
+  background-color: #fff;
+  border: 1px solid #dde0e6;
+  color: #646d7a;
+  display: block;
+  font-size: 1.5rem;
+  line-height: 5.5rem;
+  padding: 0 4px 0 14px;
+  text-decoration: none;
+  width: 532px;
+  text-align: left;
+  height: 32px;
+  background: 0 0;
+  font: inherit;
+  cursor: pointer;
+  overflow: visible;
+  font-family: Segoe UI WestEuropean,Segoe UI,Segoe UI Emoji,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  -webkit-appearance: button;
+  margin-left: 40px;
+
+
+  background-color: #fff;
+  color: #646d7a;
+  display: block;
+  padding: 6px 8px;
+  text-decoration: none;
+  text-align: left;
 }
