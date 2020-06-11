@@ -130,12 +130,12 @@ class Feed extends React.Component{
               <h4>SUGGESTED PEOPLE</h4>
               <div className='first-person'>
                 <i className="fas fa-user-circle"></i>
-                <h5>{this.props.users[2].first_name} {this.props.users[2].last_name}</h5>  
+                <h5>{this.props.users[29].first_name} {this.props.users[29].last_name}</h5>  
               </div>
               <button>Follow</button>
               <div className='second-person'>
                 <i className="fas fa-user-circle"></i>
-                <h5>{this.props.users[3].first_name} {this.props.users[3].last_name}</h5>
+                <h5>{this.props.users[30].first_name} {this.props.users[30].last_name}</h5>
 
               </div>
                 <button>Follow</button>
