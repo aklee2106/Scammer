@@ -180,8 +180,54 @@ li > a:hover{
   list-style: none;
   // display: inline-block;
   margin-right: 20px;
-
+  margin-bottom: 0;
 }
 
 
+//lower section styling
 
+.lower-section {
+  font-family: egoe UI WestEuropean,Segoe UI,Segoe UI Emoji,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;;
+  color: #343A41;
+  // text-align: center;
+  margin-top: 60px;
+  padding-top: 100px;
+  margin-left: 136px;
+  margin-right: 136px;
+}
+
+.lower-section p {
+  font-size: 16px; 
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.lower-section h2 {
+  font-size: 32px; 
+  font-weight: 600;
+  margin: 0 0 18px 0;
+  font-size: 2rem;
+  line-height: 1.25;
+}
+
+.text-div {
+  width: 500px;
+}
+
+.outer-div{
+  display: flex;
+  padding-bottom: 118px;
+  justify-content: center;
+}
+
+.lower-section img:nth-child(even) {
+  padding-left: 100px;
+}
+
+.lower-section img:nth-child(odd) {
+  padding-right: 100px;
+}

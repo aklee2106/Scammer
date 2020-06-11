@@ -57,6 +57,46 @@ class Splash extends React.Component {
           </div>
         </main>
 
+        <section className="lower-section">
+          <div className="outer-div">
+            <div className="text-div">
+              <h2>Know what's happening from day to day</h2>
+              <p>Discover all the work that happens between the big announcements 
+                and the success story. Connect your org's front-runners or top-level 
+                leaders back at headquarters to see everyone's progress come together
+              </p>
+            </div>
+            <img src={window.squares}></img>
+          </div>
+
+          <div className="outer-div">
+            <img src={window.circles}></img>
+            <div className="text-div">
+              <h2>Spend less time crafting the perfect message.</h2>
+              <p>Join meaningful discussions to move your work along faster. Get quick
+                answers to your questions, and have productive, spontaneous conversations
+                  with experts and creatives across your org.
+              </p>
+            </div>
+            
+
+          </div>
+
+          <div className="outer-div">
+            <div className="text-div">
+              <h2>Build on the work of others.</h2>
+              <p>Make sure you're not repeating work that's already been done. 
+                Use the learnings or progress of others to accelerate your own productivity. 
+                Collaborate in a community to share ideas and solve problems in half the time.
+              </p>
+              
+            </div>
+            <img src={window.more_squares}></img>
+          </div>
+         
+
+        </section>
+        
         <footer className="splash-footer">
           
           <ul className='footer-links'>
