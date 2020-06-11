@@ -43,12 +43,10 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    let formItem; 
-    let asideItem;
-
-    if (this.props.formType === "Log In") {formItem = (
+    const formItem = (this.props.formType === "Log In") ? 
       <div className="login-form">
         <br/>
+
         <label className='form-label'>Email Address
           <br/>
           <input type="text"
@@ -59,6 +57,7 @@ class SessionForm extends React.Component {
           />
         </label>
         <br/>
+        
         <label className='form-label'>Password
           <br/>
           <input type="password"
@@ -68,6 +67,7 @@ class SessionForm extends React.Component {
           />
         </label>
         <br/>
+        
         <a className="form-a" href="https://www.yammer.com/forgotten_password/new">Forgot password?</a>
 
         <div className="form-bottom">
@@ -75,9 +75,10 @@ class SessionForm extends React.Component {
           <label  className="checkbox-label">Remember me</label>
           <br/>
           <input className="session-submit" type="submit" value={this.props.formType} />
-        </div>
-      </div>) 
-    } else {formItem = (
+        </div>  
+
+      </div> : 
+
       <div className="login-form">
         <br/>
         <label>Email Address
@@ -99,32 +100,28 @@ class SessionForm extends React.Component {
         </label>
 
         <br/>
-       <h4>Networks are private: a valid company email is required</h4>
+        <h4>Networks are private: a valid company email is required</h4>
         <input className="session-submit" type="submit" value={this.props.formType} />
-      </div>) 
-    }
+      </div>
 
-    if (this.props.formType==="Log In"){
-      asideItem= (
-        <div className="login-aside">
-          <h4>Don't have an account?</h4>
-          <Link className="aside-links" to={'/signup'}>Sign Up</Link>
-          <h4>Want to learn more?</h4>
-          <a className="aside-links" href="https://www.microsoft.com/en-US/microsoft-365/yammer/yammer-overview">
-            See how Yammer helps you work better.</a>
-        </div>
-      )
-     } else {
-       asideItem = (
-        <div className="login-aside">
+
+    const asideItem = (this.props.formType === "Log In") ? 
+
+      <div className="login-aside">
+        <h4>Don't have an account?</h4>
+        <Link className="aside-links" to={'/signup'}>Sign Up</Link>
+        <h4>Want to learn more?</h4>
+        <a className="aside-links" href="https://www.microsoft.com/en-US/microsoft-365/yammer/yammer-overview">
+          See how Yammer helps you work better.</a>
+      </div> :
+
+      <div className="login-aside">
         <h4>Already have an account?</h4>
         <Link className="aside-links" to={'/login'}>Log In</Link>
         <h4>Want to learn more?</h4>
         <a className="aside-links" href="https://www.microsoft.com/en-US/microsoft-365/yammer/yammer-overview">
           See how Yammer helps you work better.</a>
-        </div>
-       )
-      }
+      </div>
 
     return (
       

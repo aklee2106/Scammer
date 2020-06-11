@@ -26,13 +26,10 @@ class CommentForm extends React.Component {
   toggle(){
     
     if (this.state.textOpen === true) {
-     
       this.setState({textOpen: false})
     } else {
-      
       this.setState({textOpen: true})
     } 
-     
   }
 
   render(){
