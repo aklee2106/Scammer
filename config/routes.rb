@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :index]
     resource :session, only: [:create, :destroy]
     resources :conversations, except: [:new, :edit] 
-    resources :comments, only: [:index, :create, :show]
+    resources :comments, only: [:index, :create, :show, :destroy]
     resources :groups, only: [:index, :create, :show]
   end
 

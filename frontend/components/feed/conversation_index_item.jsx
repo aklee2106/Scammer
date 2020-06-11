@@ -29,16 +29,17 @@ class ConversationIndexItem extends React.Component {
     
       <div className="convo-index-item-buttons">
         <button><i className="fas fa-thumbs-up"></i> LIKE</button>
-        
-        <button className="reply-button" onClick={this.reply}>
-          <i className="fas fa-reply"></i> REPLY
-        </button>
-        
+        <button className="reply-button"><i className="fas fa-reply"></i> REPLY</button>
         <button><i className="fas fa-share-alt"></i> SHARE</button>
         <button><i className="fas fa-edit"></i> EDIT</button>
+
+        <button onClick={ ()=> this.props.deleteConversation(this.props.conversation.id)}> 
+          <i className="fas fa-backspace"></i> DELETE
+        </button>
+
       </div>
+
       <CommentIndexContainer conversationId={this.props.conversation.id}/>
-      
       
       <CommentFormContainer conversationId={this.props.conversation.id}/>
     

@@ -1,8 +1,9 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Splash from './splash';
 import {login} from '../../actions/session_actions';
+import {fetchUsers} from '../../actions/session_actions';
+
 
 const mSTP = state => ({
   demoUser: {
@@ -12,7 +13,8 @@ const mSTP = state => ({
 }); 
 
 const mDTP = dispatch => ({
-  login: user => dispatch(login(user))
+  login: user => dispatch(login(user)),
+  fetchUsers: () => dispatch(fetchUsers()),
 });
 
 export default connect(mSTP, mDTP)(Splash);

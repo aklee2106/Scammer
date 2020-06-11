@@ -16,8 +16,6 @@ class CommentIndex extends React.Component{
     
     const {users, comments, conversationId} = this.props; 
 
-    // const author = this.props.users[comment.author_id]
-
     const filteredComments = comments.filter(comment => (
       comment.conversation_id === conversationId
     )); 
@@ -50,6 +48,7 @@ class CommentIndex extends React.Component{
                   
                   <button><i className="fas fa-share-alt"></i> SHARE</button>
                   <button><i className="fas fa-edit"></i> EDIT</button>
+                  <button onClick={()=> this.props.deleteComment(comment.id)}> <i className="fas fa-backspace"></i> DELETE</button>
                 </div>
 
               </li>

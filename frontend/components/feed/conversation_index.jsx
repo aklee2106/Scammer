@@ -29,6 +29,7 @@ class ConversationIndex extends React.Component {
              <ConversationIndexItem conversation={conversation}
               key={conversation.id}
               users={users}
+              deleteConversation={this.props.deleteConversation}
             />
             ))
           }
