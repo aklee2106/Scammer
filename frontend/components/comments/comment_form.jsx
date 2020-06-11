@@ -6,7 +6,8 @@ class CommentForm extends React.Component {
     this.state = {
       body: "",
       user_id: this.props.userId,
-      conversation_id: this.props.conversationId
+      conversation_id: this.props.conversationId,
+      textOpen: false
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.toggle = this.toggle.bind(this);
@@ -23,37 +24,39 @@ class CommentForm extends React.Component {
   }
 
   toggle(){
-    const q = document.getElementById("q");
-    const w = document.getElementById('w');
-
-    if (q.style.display === "none") {
-      q.style.display = "block";
-      w.style.display = "none";
+    
+    if (this.state.textOpen === true) {
+     
+      this.setState({textOpen: false})
     } else {
-      q.style.display = "none";
-      w.style.display = "block";
-    }
+      
+      this.setState({textOpen: true})
+    } 
+     
   }
 
   render(){
+   
+    const showThis = this.state.textOpen ? 
+    <form onSubmit={this.handleSubmit} className="comment-form">
+      <textarea className="comment-textarea"
+        value={this.state.body}
+        onChange={this.update('body')}
+        onBlur={this.toggle}
+      />
+      <input type='submit' value='Post' />
+    </form> : 
 
+    <button onClick={this.toggle} className="button-as-link2">Write a reply</button>
+
+    
     return (
-      <div id='t' className="comment-form-div">
-        <i className="fas fa-user-circle"></i>
-        <button id="q" onClick={this.toggle} className="button-as-link2">Write a reply</button>
+      <div className="comment-form-div">
+        <i id='user-icon' className="fas fa-user-circle"></i>
+
+        {showThis}
         
-        <form id="w" onSubmit={this.handleSubmit} className="comment-form">
-      
-          <textarea className="comment-textarea"
-            value={this.state.body}
-            onChange={this.update('body')}
-            onBlur={this.toggle}
-          />
-          
-          <input type='submit' value='Post' />
-
-        </form>
-
+        
       </div>
     )
   }

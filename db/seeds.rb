@@ -6,27 +6,35 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Conversation.destroy_all
-Group.destroy_all
 Network.destroy_all
+Group.destroy_all
+Conversation.destroy_all
 User.destroy_all
 
 
 u1 = User.create!(
-  email: 'alex@microsoft.com',
-  password: '1234567',
-  first_name: "alex",
-  last_name: "lee",
+  email: 'alex@amazon.com',
+  password: 'hunter12',
+  first_name: "Alex",
+  last_name: "Lee",
   birthday: Date.new,
-  network_id: 2, 
+  network_id: 10, 
 )
 
 u2 = User.create!(
-  email: 'jesse@aa.com',
+  email: 'jesse@amazon.com',
   password: 'hunter12',
   first_name: "Jesse",
   last_name: "Lin",
-  network_id: 2
+  network_id: 10
+)
+
+u3 = User.create!(
+  email: 'tiff@amazon.com',
+  password: 'hunter12',
+  first_name: "Tiffany",
+  last_name: "Chin",
+  network_id: 10
 )
 
 demo = User.create!(
@@ -56,14 +64,8 @@ c3= Conversation.create!(
   created_at: Date.new(2020,05,20), 
 )
 
-
-
 n1 = Network.create!(
-  name: 'Amazon'
-)
-
-n2 = Network.create!(
-  name: 'Microsoft'
+  name: 'Amazon',
 )
 
 g1 = Group.create!(
@@ -72,3 +74,8 @@ g1 = Group.create!(
   network_id: n1.id
 ) 
 
+g2 = Group.create!(
+  name: 'Finance Team',
+  admin_id: u1.id,
+  network_id: n1.id
+)

@@ -7,8 +7,6 @@ class Feed extends React.Component{
 
   componentDidMount(){
     this.props.fetchUsers();
-    // this.props.fetchConversations();
-    // debugger
   }
 
   render(){
@@ -137,7 +135,7 @@ class Feed extends React.Component{
               <button>Follow</button>
               <div className='second-person'>
                 <i className="fas fa-user-circle"></i>
-                <h5>{this.props.users[1].first_name} {this.props.users[1].last_name}</h5>
+                <h5>{this.props.users[3].first_name} {this.props.users[3].last_name}</h5>
 
               </div>
                 <button>Follow</button>

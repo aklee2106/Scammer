@@ -9,7 +9,7 @@ class ConversationIndex extends React.Component {
     //so this will update global state. then because state updates, mSTP fires up again
     //and changes this component's local state? 
     this.props.fetchConversations();
-    // this.props.fetchUsers();
+    this.props.fetchUsers();
   }
 
   render() {

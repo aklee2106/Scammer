@@ -54,7 +54,7 @@ export const logout = () => dispatch => (
 // }
 
 const receiveUsers = (users) => {
-  debugger
+  // debugger
   return {
     type: RECEIVE_USERS,
       users
