@@ -7,7 +7,9 @@ class SessionForm extends React.Component {
     super(props);
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      first_name: '',
+      last_name: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -98,8 +100,24 @@ class SessionForm extends React.Component {
             className="login-input"
           />
         </label>
-
         <br/>
+        <label className='form-label'>First name
+          <br/>
+          <input type="text"
+            value={this.state.first_name}
+            onChange={this.update('first_name')}
+            className="login-input"
+          />
+        </label>
+        <br/>
+        <label className='form-label'>Last name
+          <br/>
+          <input type="text"
+            value={this.state.last_name}
+            onChange={this.update('last_name')}
+            className="login-input"
+          />
+        </label>
         <h4>Networks are private: a valid company email is required</h4>
         <input className="session-submit" type="submit" value={this.props.formType} />
       </div>
