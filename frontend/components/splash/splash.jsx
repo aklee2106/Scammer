@@ -53,11 +53,6 @@ class Splash extends React.Component {
           </div>
         </main>
 
-        {/* <section>
-
-        </section> */}
-
-
         <footer className="splash-footer">
           
           <ul className='footer-links'>
