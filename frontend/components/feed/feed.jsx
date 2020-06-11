@@ -7,12 +7,17 @@ class Feed extends React.Component{
 
   componentDidMount(){
     this.props.fetchUsers();
+    this.props.requestGroups(); 
   }
 
   render(){
     // debugger
     if (Object.values(this.props.users).length < 2) {
       return null; 
+    }
+
+    if (!Object.values(this.props.groups).length) {
+      return null;
     }
 
     return (
@@ -38,7 +43,6 @@ class Feed extends React.Component{
                       <h4>{this.props.currentUser.email}</h4>
                       <Link onClick={this.props.logout} to="/login">Log Out</Link>
                     </div>
-                    
                     
                   </div>
 
@@ -74,10 +78,12 @@ class Feed extends React.Component{
               </div>
               
               <div className='add-groups'>
+        
                 <h5>AMAZON GROUPS <i className="fas fa-plus"></i></h5>
-                <h5>Finance Team</h5>
-                <h5>CEO Corner</h5>
+                <h5><Link to={`/groups/${this.props.groups[1].id}`}> {this.props.groups[1].name}</Link></h5>
+                <h5><Link to={`/groups/${this.props.groups[2].id}`}>{this.props.groups[2].name}</Link></h5>
                 <h5>All Company</h5>
+
                 <h5 id='blue'><i className="fas fa-plus"></i> Create a group</h5>
                 <h5 id='blue'><i className="fas fa-users"></i> Discover more groups</h5>
               </div>
@@ -146,13 +152,13 @@ class Feed extends React.Component{
 
               <div className="first-group">
                 <i className="fas fa-chart-line"></i>
-                <h5>Finance</h5>
+                <h5>{this.props.groups[1].name}</h5>
               </div>
                 <button>Join</button>
 
               <div className="second-group">
                 <i className="fas fa-chart-pie"></i>
-                <h5>CEO Corner</h5>
+                <h5>{this.props.groups[2].name}</h5>
               </div>
                 <button>Join</button>
 

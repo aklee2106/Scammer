@@ -1,3 +1,58 @@
 // Place all the styles related to the api/groups controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.groups-show-content {
+  display: flex;
+  // justify-content: space-around;
+  height: calc(100% - 50px);
+  min-height: calc(100% - 50px);
+  top: 50px;
+  overflow-x: auto;
+  overflow-y: scroll;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.groups-show-display {
+  color: #343a41;
+  margin: 10px 100px;
+  min-width: 840px;
+  display: flex; 
+  flex-direction: column;
+}
+
+.groups-main-bar {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1040px;
+  width: 800px;
+  background-color: forestgreen; 
+  display: flex;
+  color: white;
+  
+}
+
+.groups-main-bar i{
+  font-size:60px;
+  padding: 5px;
+  margin: 20px;
+  color: rgb(118, 118, 118);
+  background-color: rgb(195, 195, 195);
+}
+
+.groups-main-bar > h1 {
+  padding-top: 20px;
+}
+
+.convo-form {
+  z-index: 2;
+}
+
+.groups-main-bar .fa-users:hover {
+  background-color: rgb(118, 118, 118);
+}
+
+

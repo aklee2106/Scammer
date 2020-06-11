@@ -9,6 +9,7 @@ class Splash extends React.Component {
   
   componentDidMount(){
     this.props.fetchUsers();
+    this.props.requestGroups();
   }
 
   demoLogin(e){

@@ -287,6 +287,7 @@
   display: inline-block;
 }
 
+
 .suggested-people-div div, .suggested-groups div {
   // margin-bottom: 30px;
   display: flex;
@@ -475,7 +476,7 @@
   padding-bottom: 8px;
 }
 
-.add-groups > h5:hover {
+.add-groups h5:hover {
   background-color: lightgray; 
 }
 
@@ -488,6 +489,10 @@
   padding: 3px 16px;
   vertical-align: baseline;
   margin-bottom: 4px;
+}
+
+h5 > a {
+  text-decoration: none;
 }
 
 #blue {

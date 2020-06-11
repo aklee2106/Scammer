@@ -33,7 +33,7 @@ class ConversationForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="convo-form">
 
         <button id="x" onClick={this.toggle} className="button-as-link">What are you working on?</button>
         
