@@ -9,24 +9,6 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
-  # has_many :likes,
-  #   foreign_key: :user_id,  
-  #   class_name: :Like
-
-  # has_many :conversations, 
-  #   foreign_key: :author_id,
-  #   class_name: :Conversation
-
-  # has_many :groups, 
-  #   foreign_key: :admin_id,
-  #   class_name: :Group
-
-  # # belongs_to :network,
-  # #   foreign_key: :network_id,
-  # #   class_name: :Network
-
-  
-
   def email_cannot_be_personal 
     personal_email_domains = ['gmail', 'yahoo', 'outlook', 'aol', 'hotmail', 'msn']
 
