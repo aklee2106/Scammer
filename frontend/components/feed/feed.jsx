@@ -80,8 +80,8 @@ class Feed extends React.Component{
               <div className='add-groups'>
         
                 <h5>AMAZON GROUPS <i className="fas fa-plus"></i></h5>
-                <h5><Link to={`/groups/${this.props.groups[1].id}`}> {this.props.groups[1].name}</Link></h5>
-                <h5><Link to={`/groups/${this.props.groups[2].id}`}>{this.props.groups[2].name}</Link></h5>
+                <h5><Link to={`/groups/${this.props.groups[6].id}`}> {this.props.groups[6].name}</Link></h5>
+                <h5><Link to={`/groups/${this.props.groups[7].id}`}>{this.props.groups[7].name}</Link></h5>
                 <h5>All Company</h5>
 
                 <h5 id='blue'><i className="fas fa-plus"></i> Create a group</h5>
@@ -136,12 +136,12 @@ class Feed extends React.Component{
               <h4>SUGGESTED PEOPLE</h4>
               <div className='first-person'>
                 <i className="fas fa-user-circle"></i>
-                <h5>{this.props.users[3].first_name} {this.props.users[3].last_name}</h5>  
+                <h5>{this.props.users[35].first_name} {this.props.users[35].last_name}</h5>  
               </div>
               <button>Follow</button>
               <div className='second-person'>
                 <i className="fas fa-user-circle"></i>
-                <h5>{this.props.users[4].first_name} {this.props.users[4].last_name}</h5>
+                <h5>{this.props.users[36].first_name} {this.props.users[36].last_name}</h5>
 
               </div>
                 <button>Follow</button>
@@ -152,13 +152,13 @@ class Feed extends React.Component{
 
               <div className="first-group">
                 <i className="fas fa-chart-line"></i>
-                <h5>{this.props.groups[1].name}</h5>
+                <h5>{this.props.groups[6].name}</h5>
               </div>
                 <button>Join</button>
 
               <div className="second-group">
                 <i className="fas fa-chart-pie"></i>
-                <h5>{this.props.groups[2].name}</h5>
+                <h5>{this.props.groups[7].name}</h5>
               </div>
                 <button>Join</button>
 
