@@ -31,8 +31,8 @@ Yabber offers the same functionality.
 
 To accomplish this, I just wrote my own custom error handling/message in my User Model and Controller on the backend. 
 
-![Model](gifs/model)
-![Controller](gifs/controller)
+![Model](gifs/model.png)
+![Controller](gifs/controller.png)
 
 ### Conversations(Posts)
 
