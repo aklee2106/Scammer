@@ -62,7 +62,8 @@ class GroupsShow extends React.Component {
 
                 <div className="left-bar-icons">
                   <div className="left-icons">
-                    <i className="fas fa-home"></i>
+                    <a href="#/home"><i className="fas fa-home"></i></a>
+                    
                     <i className="fas fa-envelope"></i>
                     <i className="fas fa-bell"></i>
                   </div>
@@ -98,13 +99,11 @@ class GroupsShow extends React.Component {
                 <button><i className="fas fa-chart-bar"></i> Poll</button>
                 <button><i className="fas fa-trophy"></i> Praise</button>
               </div>
-              <ConversationFormContainer />
-              <ConversationIndexContainer />
+              <ConversationFormContainer groupId={this.props.currentGroup.id}/>
+              <ConversationIndexContainer currentGroup ={this.props.currentGroup}/>
             </div>
 
-            
           
-
           </div>
 
 

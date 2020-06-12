@@ -46,6 +46,23 @@ demo = User.create!(
   network_id: 10, 
 )
 
+n1 = Network.create!(
+  name: 'Amazon',
+)
+
+g1 = Group.create!(
+  name: 'CEO Corner',
+  admin_id: demo.id,
+  network_id: n1.id
+) 
+
+g2 = Group.create!(
+  name: 'Finance Team',
+  admin_id: u1.id,
+  network_id: n1.id
+)
+
+
 c1= Conversation.create!(
   body: "My name is Jesse- Do we get Memorial Day off?",
   author_id: u2.id,
@@ -64,18 +81,20 @@ c3= Conversation.create!(
   created_at: Date.new(2020,05,20), 
 )
 
-n1 = Network.create!(
-  name: 'Amazon',
+c4= Conversation.create!(
+  body: "This post is for the Finance Group",
+  author_id: u1.id,
+  group_id: g2.id,
+  created_at: Date.new(2020,05,20), 
 )
 
-g1 = Group.create!(
-  name: 'CEO Corner',
-  admin_id: demo.id,
-  network_id: n1.id
-) 
-
-g2 = Group.create!(
-  name: 'Finance Team',
-  admin_id: u1.id,
-  network_id: n1.id
+c5= Conversation.create!(
+  body: "This post is for CEO Corner",
+  author_id: u1.id,
+  group_id: g1.id,
+  created_at: Date.new(2020,05,20), 
 )
+
+
+
+

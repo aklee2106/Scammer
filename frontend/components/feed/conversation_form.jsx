@@ -3,14 +3,24 @@ import React from 'react';
 class ConversationForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.conversation;
+    // this.state = this.props.conversation;
+
+    this.state = {
+      body: '',
+      author_id: props.author_id,
+      group_id: '',
+    }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.toggle = this.toggle.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    // debugger
+    this.setState( {group_id: this.props.groupId} );
+    // debugger
     this.props.action(this.state);
+    
     this.setState({body: ''});
   }
 

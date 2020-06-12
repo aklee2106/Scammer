@@ -136,7 +136,7 @@ class Feed extends React.Component{
               <h4>SUGGESTED PEOPLE</h4>
               <div className='first-person'>
                 <i className="fas fa-user-circle"></i>
-                <h5>{this.props.users[5].first_name} {this.props.users[5].last_name}</h5>  
+                <h5>{this.props.users[3].first_name} {this.props.users[3].last_name}</h5>  
               </div>
               <button>Follow</button>
               <div className='second-person'>

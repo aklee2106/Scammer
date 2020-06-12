@@ -1,1 +1,1 @@
-json.extract! @conversation, :id, :body, :author_id
+json.extract! @conversation, :id, :body, :author_id, :group_id

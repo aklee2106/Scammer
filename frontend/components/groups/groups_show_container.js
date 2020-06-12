@@ -7,13 +7,17 @@ import {fetchUsers} from '../../actions/session_actions';
 import { fetchConversations} from '../../actions/conversation_actions';
 import {requestGroups} from '../../actions/group_actions';
 
-const mSTP = (state, ownProps) => ({
-  groups: state.entities.groups, 
-  currentGroup: state.entities.groups[ownProps.match.params.groupId],
-  users: state.entities.users,
-  groups: state.entities.groups,
-  currentUser: state.entities.users[state.session.id], 
-}); 
+const mSTP = (state, ownProps) => {
+  // debugger
+  return {
+    groups: state.entities.groups, 
+    currentGroup: state.entities.groups[ownProps.match.params.groupId],
+    users: state.entities.users,
+    currentUser: state.entities.users[state.session.id], 
+    conversations: Object.values(state.entities.conversations).reverse(),
+  }
+ 
+}; 
 
 const mDTP = dispatch => ({
   logout: () => dispatch(logout()),

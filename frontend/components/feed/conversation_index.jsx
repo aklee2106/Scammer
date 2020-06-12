@@ -14,18 +14,25 @@ class ConversationIndex extends React.Component {
 
   render() {
     // debugger
-    const { conversations, users} = this.props;
+    const { conversations, users, currentGroup} = this.props;
 
     //what happens if this were not here? First time it renders, error out? 
     if (Object.values(users).length <2 ){
       return null;
     }
 
+    const filteredConversations = currentGroup ? 
+      
+      conversations.filter(convo=>(
+        convo.group_id === currentGroup.id
+      )) : 
+      conversations
+
     return (
       <div>
         <ul>
           {
-            conversations.map(conversation => (
+            filteredConversations.map(conversation => (
              <ConversationIndexItem conversation={conversation}
               key={conversation.id}
               users={users}
