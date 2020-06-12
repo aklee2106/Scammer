@@ -13,14 +13,24 @@ class ConversationForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.toggle = this.toggle.bind(this);
   }
+  
+  componentDidMount(){
+    this.setState( {group_id: this.props.groupId} );
+  }
+
+  componentDidUpdate(prevProps){
+    // debugger
+    if (this.props.group !== prevProps.group) {
+      this.setState({group_id: this.props.group})
+    }
+    // debugger
+  }
 
   handleSubmit(e) {
     e.preventDefault();
     // debugger
-    this.setState( {group_id: this.props.groupId} );
-    // debugger
     this.props.action(this.state);
-    
+    // debugger
     this.setState({body: ''});
   }
 

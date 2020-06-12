@@ -3,18 +3,14 @@ import ConversationForm from './conversation_form';
 import {createConversation} from '../../actions/conversation_actions';
 
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
   // debugger
   return {
     author_id: state.session.id,
     formType: 'Create Post', 
+    group: ownProps.groupId
   }
   
-  // conversation: {
-  //   body: '',
-  //   author_id: state.session.id,
-  //   group_id: '',
-  // }, 
 };
 
 const mapDispatchToProps = dispatch => ({
