@@ -29,20 +29,21 @@ Yabber offers the same functionality.
 
 ![Homepage Demo](gifs/signup_error.gif)
 
-To accomplish this, I just wrote my own custom error handling/message in my User Model and Controller on the backend. 
+To accomplish this, I wrote my own custom error handling/message in my User Model and Controller on the backend. 
 
 ![Model](gifs/model.png)
 ![Controller](gifs/controller.png)
 
 ### Posts and Comments
 
-Users can create and delete posts and reply to other users' posts/comments. 
+Users can create/delete posts and reply to other users' posts/comments. 
 
 ### Groups
 
-In addition, users and also create/delete posts and comments relegated for specific groups. They can also navigate to specific groups and see the filtered posts relevant for the specific group. 
+In addition, users can also create/delete posts and comments relegated for specific groups. They can also navigate to specific groups and see the filtered posts relevant for the specific group. 
 
 ### Future Features
+* Enhanced Group(s) functionality
 * Profile pages
 * Likes
 * Search
