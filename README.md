@@ -34,11 +34,13 @@ To accomplish this, I just wrote my own custom error handling/message in my User
 ![Model](gifs/model.png)
 ![Controller](gifs/controller.png)
 
-### Conversations(Posts)
+### Posts and Comments
 
+Users can create and delete posts and reply to other users' posts/comments. 
 
 ### Groups
 
+In addition, users and also create/delete posts and comments relegated for specific groups. They can also navigate to specific groups and see the filtered posts relevant for the specific group. 
 
 ### Future Features
 * Profile pages
