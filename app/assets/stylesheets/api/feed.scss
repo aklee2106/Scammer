@@ -75,6 +75,7 @@
   padding: 0;
   font-family: Segoe UI WestEuropean,Segoe UI,Segoe UI Emoji,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
   vertical-align: baseline;
+  height: auto;
 }
 
 .groups-ul > li {
@@ -363,7 +364,7 @@
   background-color: #f1f1f1;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 10;
   color: black; 
   height: 856px;
   width: 319px;
@@ -406,10 +407,6 @@
   background-color: white;
   padding: 14px 16px 15px; 
   text-align: left; 
-}
-
-.dropdown > h1 {
-
 }
 
 .account-div h4 {
