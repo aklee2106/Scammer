@@ -7,7 +7,8 @@ import {deleteComment} from '../../actions/comment_actions';
 const mSTP = state => ({
   comments: Object.values(state.entities.comments), 
   conversations: Object.values(state.entities.conversations).reverse(),
-  users: state.entities.users
+  users: state.entities.users,
+  currentUser: state.entities.users[state.session.id]
 });
 
 const mDTP = dispatch => ({

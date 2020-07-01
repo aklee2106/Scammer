@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import {formatUploadTime} from '../../util/time_util';
 import CommentFormContainer from '../comments/comment_form_container';
 import CommentIndexContainer from '../comments/comment_index_container';
@@ -8,12 +7,41 @@ import CommentIndexContainer from '../comments/comment_index_container';
 class ConversationIndexItem extends React.Component {
   constructor (props){
     super(props);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
-
+  handleDelete(e){
+    // debugger
+    e.preventDefault()
+    if (this.props.currentUser.id === this.props.conversation.author_id){
+      this.props.deleteConversation(this.props.conversation.id);
+    } else {
+      console.log('can only delete posts you created');
+    }
+  }
 
   render(){
     // debugger
+
+    const buttons = this.props.currentUser.id === this.props.conversation.author_id?
+      <div className="convo-index-item-buttons">
+        <button><i className="fas fa-thumbs-up"></i> LIKE</button>
+        <button className="reply-button"><i className="fas fa-reply"></i> REPLY</button>
+        <button><i className="fas fa-share-alt"></i> SHARE</button>
+        <button><i className="fas fa-edit"></i> EDIT</button>
+        <button onClick={ this.handleDelete}> 
+          <i className="fas fa-backspace"></i> DELETE
+        </button>
+      </div> :
+
+      <div className="convo-index-item-buttons">
+      <button><i className="fas fa-thumbs-up"></i> LIKE</button>
+      <button className="reply-button"><i className="fas fa-reply"></i> REPLY</button>
+      <button><i className="fas fa-share-alt"></i> SHARE</button>
+      <button><i className="fas fa-edit"></i> EDIT</button>
+      </div>
+
+
     return (
     <li className="newsfeed-convo-item-li">
       <div className="convo-item-div">
@@ -27,17 +55,7 @@ class ConversationIndexItem extends React.Component {
         </div>
       </div>
     
-      <div className="convo-index-item-buttons">
-        <button><i className="fas fa-thumbs-up"></i> LIKE</button>
-        <button className="reply-button"><i className="fas fa-reply"></i> REPLY</button>
-        <button><i className="fas fa-share-alt"></i> SHARE</button>
-        <button><i className="fas fa-edit"></i> EDIT</button>
-
-        <button onClick={ ()=> this.props.deleteConversation(this.props.conversation.id)}> 
-          <i className="fas fa-backspace"></i> DELETE
-        </button>
-
-      </div>
+      {buttons}
 
       <CommentIndexContainer conversationId={this.props.conversation.id}/>
       

@@ -53,16 +53,16 @@ class ConversationForm extends React.Component {
 
   render() {
     return (
-      <div className="convo-form">
+      <div className="convo-form" >
 
         <button id="x" onClick={this.toggle} className="button-as-link">What are you working on?</button>
         
-        <form id="y"onSubmit={this.handleSubmit} className="feed-post-form">
+        <form id="y" onSubmit={this.handleSubmit} className="feed-post-form">
      
-          <textarea onBlur={this.toggle} className="form-text-area"
+          <textarea className="form-text-area"
             value={this.state.body}
             onChange={this.update('body')}
-        
+            onBlur={this.toggle}
           />
          
           <input type='submit' value='Post' />

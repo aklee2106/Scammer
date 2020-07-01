@@ -14,7 +14,7 @@ class ConversationIndex extends React.Component {
 
   render() {
     // debugger
-    const { conversations, users, currentGroup} = this.props;
+    const { conversations, users, currentGroup, currentUser} = this.props;
 
     //what happens if this were not here? First time it renders, error out? 
     if (Object.values(users).length <2 ){
@@ -36,6 +36,7 @@ class ConversationIndex extends React.Component {
              <ConversationIndexItem conversation={conversation}
               key={conversation.id}
               users={users}
+              currentUser = {currentUser}
               deleteConversation={this.props.deleteConversation}
             />
             ))
