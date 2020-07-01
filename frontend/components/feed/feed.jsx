@@ -136,12 +136,14 @@ class Feed extends React.Component{
               <h4>SUGGESTED PEOPLE</h4>
               <div className='first-person'>
                 <i className="fas fa-user-circle"></i>
-                <h5>{this.props.users[1].first_name} {this.props.users[1].last_name}</h5>  
+                {/* <h5>{this.props.users[1].first_name} {this.props.users[1].last_name}</h5>   */}
+                <h5>Jesse Lin</h5>  
               </div>
               <button>Follow</button>
               <div className='second-person'>
                 <i className="fas fa-user-circle"></i>
-                <h5>{this.props.users[2].first_name} {this.props.users[2].last_name}</h5>
+                {/* <h5>{this.props.users[2].first_name} {this.props.users[2].last_name}</h5> */}
+                <h5>Tiffany Chin</h5>
 
               </div>
                 <button>Follow</button>
@@ -152,13 +154,15 @@ class Feed extends React.Component{
 
               <div className="first-group">
                 <i className="fas fa-chart-line"></i>
-                <h5>{this.props.groups[1].name}</h5>
+                {/* <h5>{this.props.groups[1].name}</h5> */}
+                <h5>CEO Corner</h5>
               </div>
                 <button>Join</button>
 
               <div className="second-group">
                 <i className="fas fa-chart-pie"></i>
-                <h5>{this.props.groups[2].name}</h5>
+                {/* <h5>{this.props.groups[2].name}</h5> */}
+                <h5>Finance Team</h5>
               </div>
                 <button>Join</button>
 
