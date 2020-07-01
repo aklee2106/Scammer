@@ -5,7 +5,6 @@ export const RECEIVE_CONVERSATION = 'RECEIVE_CONVERSATION';
 export const REMOVE_CONVERSATION = 'REMOVE_CONVERSATION';
 
 const receiveAllConversations = ({conversations, users}) => {
-  // debugger
 
   return {type: RECEIVE_ALL_CONVERSATIONS,
   conversations,

@@ -8,7 +8,6 @@ import { fetchConversations} from '../../actions/conversation_actions';
 import {requestGroups} from '../../actions/group_actions';
 
 const mSTP = (state, ownProps) => {
-  // debugger
   return {
     groups: state.entities.groups, 
     currentGroup: state.entities.groups[ownProps.match.params.groupId],

@@ -3,7 +3,6 @@ import React from 'react';
 class ConversationForm extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = this.props.conversation;
 
     this.state = {
       body: '',
@@ -19,18 +18,16 @@ class ConversationForm extends React.Component {
   }
 
   componentDidUpdate(prevProps){
-    // debugger
+    
     if (this.props.group !== prevProps.group) {
       this.setState({group_id: this.props.group})
     }
-    // debugger
+    
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    // debugger
     this.props.action(this.state);
-    // debugger
     this.setState({body: ''});
   }
 

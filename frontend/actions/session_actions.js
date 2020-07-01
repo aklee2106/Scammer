@@ -47,14 +47,7 @@ export const logout = () => dispatch => (
   ))
 );
 
-// export const fetchUser = (userId) => dispatch => {
-//   return APIUtil.fetchUser(userId)
-//       .then(payload => dispatch(receiveCurrentUser(payload)),
-//           err => dispatch(receiveSessionErrors(err.responseJSON)))
-// }
-
 const receiveUsers = (users) => {
-  // debugger
   return {
     type: RECEIVE_USERS,
       users

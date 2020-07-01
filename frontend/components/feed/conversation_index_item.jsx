@@ -11,7 +11,6 @@ class ConversationIndexItem extends React.Component {
   }
 
   handleDelete(e){
-    // debugger
     e.preventDefault()
     if (this.props.currentUser.id === this.props.conversation.author_id){
       this.props.deleteConversation(this.props.conversation.id);
@@ -21,8 +20,7 @@ class ConversationIndexItem extends React.Component {
   }
 
   render(){
-    // debugger
-
+  
     const buttons = this.props.currentUser.id === this.props.conversation.author_id?
       <div className="convo-index-item-buttons">
         <button><i className="fas fa-thumbs-up"></i> LIKE</button>

@@ -11,7 +11,6 @@ class Feed extends React.Component{
   }
 
   render(){
-    // debugger
     if (Object.values(this.props.users).length < 2) {
       return null; 
     }
