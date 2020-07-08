@@ -17,11 +17,11 @@ class CommentIndexItem extends React.Component{
       <div className="convo-index-item-buttons">
         <button><i className="fas fa-thumbs-up"></i> LIKE</button>
         
-        <button className="reply-button" onClick={this.reply}>
+        {/* <button className="reply-button" onClick={this.reply}>
           <i className="fas fa-reply"></i> REPLY
-        </button>
+        </button> */}
         
-        <button><i className="fas fa-share-alt"></i> SHARE</button>
+        {/* <button><i className="fas fa-share-alt"></i> SHARE</button> */}
         <button><i className="fas fa-edit"></i> EDIT</button>
         <button onClick={()=> deleteComment(comment.id)}> <i className="fas fa-backspace"></i> DELETE</button>
       </div> : 
@@ -29,11 +29,11 @@ class CommentIndexItem extends React.Component{
       <div className="convo-index-item-buttons">
         <button><i className="fas fa-thumbs-up"></i> LIKE</button>
 
-        <button className="reply-button" onClick={this.reply}>
+        {/* <button className="reply-button" onClick={this.reply}>
           <i className="fas fa-reply"></i> REPLY
-        </button>
+        </button> */}
 
-        <button><i className="fas fa-share-alt"></i> SHARE</button>
+        {/* <button><i className="fas fa-share-alt"></i> SHARE</button> */}
         {/* <button><i className="fas fa-edit"></i> EDIT</button> */}
       
       </div>

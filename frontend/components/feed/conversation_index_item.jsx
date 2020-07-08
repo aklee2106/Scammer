@@ -52,7 +52,7 @@ class ConversationIndexItem extends React.Component {
       <div className="convo-index-item-buttons">
         <button onClick={this.handleLike}><i className="fas fa-thumbs-up"></i> {this.state.likeButtonText}</button>
         <button onClick={this.toggle} className="reply-button"><i className="fas fa-reply"></i> REPLY</button>
-        <button><i className="fas fa-share-alt"></i> SHARE</button>
+        {/* <button><i className="fas fa-share-alt"></i> SHARE</button> */}
         <button><i className="fas fa-edit"></i> EDIT</button>
         <button onClick={ this.handleDelete}> 
           <i className="fas fa-backspace"></i> DELETE
@@ -62,7 +62,7 @@ class ConversationIndexItem extends React.Component {
       <div className="convo-index-item-buttons">
       <button onClick={this.handleLike}><i className="fas fa-thumbs-up"></i> {this.state.likeButtonText}</button>
       <button className="reply-button"><i className="fas fa-reply"></i> REPLY</button>
-      <button><i className="fas fa-share-alt"></i> SHARE</button>
+      {/* <button><i className="fas fa-share-alt"></i> SHARE</button> */}
       </div>
     
     const {conversation, likes, users} = this.props;
