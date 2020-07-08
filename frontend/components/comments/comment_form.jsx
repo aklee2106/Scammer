@@ -7,7 +7,7 @@ class CommentForm extends React.Component {
       body: "",
       user_id: this.props.userId,
       conversation_id: this.props.conversationId,
-      textOpen: false
+      textOpen: this.props.textOpen
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.toggle = this.toggle.bind(this);
@@ -33,8 +33,7 @@ class CommentForm extends React.Component {
   }
 
   render(){
-   
-    const showThis = this.state.textOpen ? 
+    const showThis = this.props.textOpen ? 
     <form onSubmit={this.handleSubmit} className="comment-form">
       <textarea className="comment-textarea"
         value={this.state.body}
@@ -46,7 +45,6 @@ class CommentForm extends React.Component {
 
     <button onClick={this.toggle} className="button-as-link2">Write a reply</button>
 
-    
     return (
       <div className="comment-form-div">
         <i id='user-icon' className="fas fa-user-circle"></i>

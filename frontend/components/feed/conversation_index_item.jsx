@@ -10,10 +10,12 @@ class ConversationIndexItem extends React.Component {
     this.state = {
       user_id: this.props.currentUser.id,
       conversation_id: this.props.conversation.id,
-      likeButtonText: "LIKE"
+      likeButtonText: "LIKE",
+      textOpen: false
     }
     this.handleDelete = this.handleDelete.bind(this);
     this.handleLike = this.handleLike.bind(this);
+    this.toggle = this.toggle.bind(this);
   }
 
   handleDelete(e){
@@ -36,11 +38,20 @@ class ConversationIndexItem extends React.Component {
     }
   }
 
+  toggle(){
+    
+    if (this.state.textOpen === true) {
+      this.setState({textOpen: false})
+    } else {
+      this.setState({textOpen: true})
+    } 
+  }
+
   render(){
     const buttons = this.props.currentUser.id === this.props.conversation.author_id?
       <div className="convo-index-item-buttons">
         <button onClick={this.handleLike}><i className="fas fa-thumbs-up"></i> {this.state.likeButtonText}</button>
-        <button className="reply-button"><i className="fas fa-reply"></i> REPLY</button>
+        <button onClick={this.toggle} className="reply-button"><i className="fas fa-reply"></i> REPLY</button>
         <button><i className="fas fa-share-alt"></i> SHARE</button>
         <button><i className="fas fa-edit"></i> EDIT</button>
         <button onClick={ this.handleDelete}> 
@@ -86,7 +97,10 @@ class ConversationIndexItem extends React.Component {
 
       <CommentIndexContainer conversationId={this.props.conversation.id}/>
       
-      <CommentFormContainer conversationId={this.props.conversation.id}/>
+      <CommentFormContainer 
+        conversationId={this.props.conversation.id}
+        textOpen={this.state.textOpen}
+      />
     
     </li>
     )
