@@ -15,7 +15,7 @@ const commentsReducer = (state = {}, action) => {
         return nextState; 
     default:
         return state;
-}
+    }
 
 }
 

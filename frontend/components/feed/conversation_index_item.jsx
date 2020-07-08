@@ -7,23 +7,39 @@ import CommentIndexContainer from '../comments/comment_index_container';
 class ConversationIndexItem extends React.Component {
   constructor (props){
     super(props);
+    this.state = {
+      user_id: this.props.currentUser.id,
+      conversation_id: this.props.conversation.id,
+      likeButtonText: "LIKE"
+    }
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleLike = this.handleLike.bind(this);
   }
 
   handleDelete(e){
     e.preventDefault()
     if (this.props.currentUser.id === this.props.conversation.author_id){
       this.props.deleteConversation(this.props.conversation.id);
+    } 
+  }
+
+  handleLike(e){
+    e.preventDefault();
+    
+
+    if (this.state.likeButtonText === "LIKE"){
+      this.props.createLike(this.state);
+      this.setState({likeButtonText: 'UNLIKE'});
     } else {
-      console.log('can only delete posts you created');
+      // this.props.deleteLike(likeId);
+      this.setState({likeButtonText: 'LIKE'});
     }
   }
 
   render(){
-  
     const buttons = this.props.currentUser.id === this.props.conversation.author_id?
       <div className="convo-index-item-buttons">
-        <button><i className="fas fa-thumbs-up"></i> LIKE</button>
+        <button onClick={this.handleLike}><i className="fas fa-thumbs-up"></i> {this.state.likeButtonText}</button>
         <button className="reply-button"><i className="fas fa-reply"></i> REPLY</button>
         <button><i className="fas fa-share-alt"></i> SHARE</button>
         <button><i className="fas fa-edit"></i> EDIT</button>
@@ -33,12 +49,16 @@ class ConversationIndexItem extends React.Component {
       </div> :
 
       <div className="convo-index-item-buttons">
-      <button><i className="fas fa-thumbs-up"></i> LIKE</button>
+      <button onClick={this.handleLike}><i className="fas fa-thumbs-up"></i> {this.state.likeButtonText}</button>
       <button className="reply-button"><i className="fas fa-reply"></i> REPLY</button>
       <button><i className="fas fa-share-alt"></i> SHARE</button>
-      <button><i className="fas fa-edit"></i> EDIT</button>
       </div>
-
+    
+    const {conversation, likes, users} = this.props;
+    
+    const filteredLikes = likes.filter(like=>(
+      like.conversation_id === conversation.id 
+    ));
 
     return (
     <li className="newsfeed-convo-item-li">
@@ -52,8 +72,17 @@ class ConversationIndexItem extends React.Component {
           <p>{this.props.conversation.body}</p>
         </div>
       </div>
-    
+  
       {buttons}
+      
+      <div className="likes-div" >
+        {filteredLikes.map(like => (
+          <span>
+            {users[like.user_id].first_name}, 
+          </span>
+        ))} 
+        <span> likes this.</span>
+      </div>
 
       <CommentIndexContainer conversationId={this.props.conversation.id}/>
       

@@ -34,7 +34,7 @@ class CommentIndexItem extends React.Component{
         </button>
 
         <button><i className="fas fa-share-alt"></i> SHARE</button>
-        <button><i className="fas fa-edit"></i> EDIT</button>
+        {/* <button><i className="fas fa-edit"></i> EDIT</button> */}
       
       </div>
 

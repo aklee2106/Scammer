@@ -79,8 +79,8 @@ class Feed extends React.Component{
               <div className='add-groups'>
         
                 <h5>AMAZON GROUPS <i className="fas fa-plus"></i></h5>
-                <h5><Link to={`/groups/${this.props.groups[6].id}`}> {this.props.groups[6].name}</Link></h5>
-                <h5><Link to={`/groups/${this.props.groups[7].id}`}>{this.props.groups[7].name}</Link></h5>
+                {/* <h5><Link to={`/groups/${this.props.groups[6].id}`}> {this.props.groups[6].name}</Link></h5>
+                <h5><Link to={`/groups/${this.props.groups[7].id}`}>{this.props.groups[7].name}</Link></h5> */}
                 <h5>All Company</h5>
 
                 <h5 id='blue'><i className="fas fa-plus"></i> Create a group</h5>

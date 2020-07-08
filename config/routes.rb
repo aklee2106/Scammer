@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :conversations, except: [:new, :edit] 
     resources :comments, only: [:index, :create, :show, :destroy]
     resources :groups, only: [:index, :create, :show]
+    resources :likes, only: [:index, :create, :show, :destroy]
   end
 
   root "static_pages#root"

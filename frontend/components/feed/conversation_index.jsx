@@ -7,11 +7,12 @@ class ConversationIndex extends React.Component {
   componentDidMount() {
     this.props.fetchConversations();
     this.props.fetchUsers();
+    this.props.fetchLikes();
   }
 
   render() {
   
-    const { conversations, users, currentGroup, currentUser} = this.props;
+    const { conversations, users, currentGroup, currentUser, likes} = this.props;
 
     if (Object.values(users).length <2 ){
       return null;
@@ -34,6 +35,9 @@ class ConversationIndex extends React.Component {
               users={users}
               currentUser = {currentUser}
               deleteConversation={this.props.deleteConversation}
+              likes = {likes}
+              createLike = {this.props.createLike}
+              deleteLike = {this.props.deleteLike}
             />
             ))
           }
