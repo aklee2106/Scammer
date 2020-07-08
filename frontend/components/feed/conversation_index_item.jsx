@@ -33,7 +33,7 @@ class ConversationIndexItem extends React.Component {
       this.props.createLike(this.state);
       this.setState({likeButtonText: 'UNLIKE'});
     } else {
-      // this.props.deleteLike(likeId);
+      this.props.deleteLike(this.props.likes[0].id);
       this.setState({likeButtonText: 'LIKE'});
     }
   }

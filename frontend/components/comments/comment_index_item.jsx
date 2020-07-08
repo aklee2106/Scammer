@@ -15,7 +15,7 @@ class CommentIndexItem extends React.Component{
     
     const buttons = this.props.currentUser.id === comment.user_id ? 
       <div className="convo-index-item-buttons">
-        <button><i className="fas fa-thumbs-up"></i> LIKE</button>
+        {/* <button><i className="fas fa-thumbs-up"></i> LIKE</button> */}
         
         {/* <button className="reply-button" onClick={this.reply}>
           <i className="fas fa-reply"></i> REPLY
@@ -27,7 +27,7 @@ class CommentIndexItem extends React.Component{
       </div> : 
 
       <div className="convo-index-item-buttons">
-        <button><i className="fas fa-thumbs-up"></i> LIKE</button>
+        {/* <button><i className="fas fa-thumbs-up"></i> LIKE</button> */}
 
         {/* <button className="reply-button" onClick={this.reply}>
           <i className="fas fa-reply"></i> REPLY
