@@ -38,6 +38,7 @@ class ConversationIndex extends React.Component {
               likes = {likes}
               createLike = {this.props.createLike}
               deleteLike = {this.props.deleteLike}
+              fetchLikes = {this.props.fetchLikes}
             />
             ))
           }

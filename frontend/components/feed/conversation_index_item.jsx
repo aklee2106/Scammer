@@ -5,6 +5,7 @@ import CommentIndexContainer from '../comments/comment_index_container';
 
 
 class ConversationIndexItem extends React.Component {
+  
   constructor (props){
     super(props);
     this.state = {
@@ -16,6 +17,23 @@ class ConversationIndexItem extends React.Component {
     this.handleDelete = this.handleDelete.bind(this);
     this.handleLike = this.handleLike.bind(this);
     this.toggle = this.toggle.bind(this);
+  
+  }
+
+  componentDidMount(){
+    const {conversation, likes, fetchLikes, currentUser} = this.props;
+
+    fetchLikes();
+    
+    const filteredLikes = likes.filter(like=>(
+      like.conversation_id === conversation.id
+    ));
+
+    filteredLikes.forEach(like=> {
+      if (like.user_id === currentUser.id){
+        this.setState({likeButtonText: "UNLIKE"});
+      }
+    });
   }
 
   handleDelete(e){
@@ -28,11 +46,18 @@ class ConversationIndexItem extends React.Component {
   handleLike(e){
     e.preventDefault();
     
+    const {likes, conversation, currentUser} = this.props; 
+
+    const currentUserLike = likes.filter(like=>(
+      like.conversation_id === conversation.id && like.user_id === currentUser.id
+    ));
+    // debugger
+
     if (this.state.likeButtonText === "LIKE"){
       this.props.createLike(this.state);
       this.setState({likeButtonText: 'UNLIKE'});
     } else {
-      this.props.deleteLike(this.props.likes[0].id);
+      this.props.deleteLike(currentUserLike[0].id);
       this.setState({likeButtonText: 'LIKE'});
     }
   }
@@ -47,6 +72,8 @@ class ConversationIndexItem extends React.Component {
   }
 
   render(){
+
+
     const buttons = this.props.currentUser.id === this.props.conversation.author_id?
       <div className="convo-index-item-buttons">
         <button onClick={this.handleLike}><i className="fas fa-thumbs-up"></i> {this.state.likeButtonText}</button>
@@ -64,12 +91,12 @@ class ConversationIndexItem extends React.Component {
       {/* <button><i className="fas fa-share-alt"></i> SHARE</button> */}
       </div>
     
-    const {conversation, likes, users} = this.props;
+    const {conversation, likes, users, currentUser} = this.props;
     
     const filteredLikes = likes.filter(like=>(
-      like.conversation_id === conversation.id 
+      like.conversation_id === conversation.id
     ));
-
+    
     return (
     <li className="newsfeed-convo-item-li">
       <div className="convo-item-div">

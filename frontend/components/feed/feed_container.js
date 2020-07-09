@@ -6,7 +6,7 @@ import { logout } from '../../actions/session_actions';
 import {fetchUsers} from '../../actions/session_actions';
 import { fetchConversations} from '../../actions/conversation_actions';
 import {requestGroups} from '../../actions/group_actions';
-
+import {requestLikes} from '../../actions/like_actions';
 
 const mSTP = state => ({
   currentUser: state.entities.users[state.session.id], 
@@ -18,7 +18,8 @@ const mDTP = dispatch => ({
   logout: () => dispatch(logout()),
   fetchUsers: () => dispatch(fetchUsers()),
   fetchConversations: ()=> dispatch(fetchConversations()),
-  requestGroups: ()=> dispatch(requestGroups())
+  requestGroups: ()=> dispatch(requestGroups()),
+  fetchLikes: () => dispatch(requestLikes())
 });
 
 export default connect(mSTP, mDTP)(Feed);

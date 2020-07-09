@@ -8,6 +8,7 @@ class Feed extends React.Component{
   componentDidMount(){
     this.props.fetchUsers();
     this.props.requestGroups(); 
+    this.props.fetchLikes();
   }
 
   render(){
