@@ -103,7 +103,7 @@ class Splash extends React.Component {
           <ul className='footer-links'>
             <li><a href="https://www.github.com/aklee2106"><i className="fab fa-github"></i></a></li>
             <li><a href="https://www.linkedin.com/in/aklee2106"><i className="fab fa-linkedin"></i></a></li>
-            <li><a href="https://angel.co/u/alexander-k-lee"><i className="fab fa-angellist"></i></a></li>
+            <li><a href="https://angel.co/u/alex-k-lee"><i className="fab fa-angellist"></i></a></li>
           </ul>
         </footer>
 
