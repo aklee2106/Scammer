@@ -28,7 +28,6 @@ class ConversationIndexItem extends React.Component {
   handleLike(e){
     e.preventDefault();
     
-
     if (this.state.likeButtonText === "LIKE"){
       this.props.createLike(this.state);
       this.setState({likeButtonText: 'UNLIKE'});
