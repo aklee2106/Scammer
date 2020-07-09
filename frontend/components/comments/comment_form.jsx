@@ -25,20 +25,19 @@ class CommentForm extends React.Component {
 
   toggle(){
     
-    if (this.state.textOpen === true) {
-      this.setState({textOpen: false})
-    } else {
+    if (this.state.textOpen === false) {
       this.setState({textOpen: true})
     } 
   }
 
   render(){
-    const showThis = this.props.textOpen ? 
+    const showThis = (this.state.textOpen || this.props.textOpen) ? 
     <form onSubmit={this.handleSubmit} className="comment-form">
       <textarea className="comment-textarea"
         value={this.state.body}
         onChange={this.update('body')}
         onBlur={this.toggle}
+        onClick={this.toggle}
       />
       <input type='submit' value='Post' />
     </form> : 
