@@ -97,6 +97,15 @@ class ConversationIndexItem extends React.Component {
       like.conversation_id === conversation.id
     ));
     
+    const likesOrLike = filteredLikes.length === 1 ? "like" : "likes"; 
+
+    const likers = filteredLikes.length ===0 ? 
+      null : 
+      <div className="likes-div" >
+        {filteredLikes.length}
+        <span> {likesOrLike}</span>
+      </div>; 
+
     return (
     <li className="newsfeed-convo-item-li">
       <div className="convo-item-div">
@@ -111,16 +120,8 @@ class ConversationIndexItem extends React.Component {
       </div>
   
       {buttons}
-      
-      <div className="likes-div" >
-        {filteredLikes.map(like => (
-          <span>
-            {users[like.user_id].first_name}, 
-          </span>
-        ))} 
-        <span> likes this.</span>
-      </div>
-
+      {likers}
+    
       <CommentIndexContainer conversationId={this.props.conversation.id}/>
       
       <CommentFormContainer 
