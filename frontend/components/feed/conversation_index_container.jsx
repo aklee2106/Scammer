@@ -10,7 +10,8 @@ const mapStateToProps = state => ({
   conversations: Object.values(state.entities.conversations).reverse(),
   users: state.entities.users,
   currentUser: state.entities.users[state.session.id],
-  likes: Object.values(state.entities.likes).reverse()
+  likes: Object.values(state.entities.likes).reverse(),
+  groups: state.entities.groups
 });
 
 const mapDispatchToProps = dispatch => ({

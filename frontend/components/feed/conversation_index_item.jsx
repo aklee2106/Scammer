@@ -91,7 +91,7 @@ class ConversationIndexItem extends React.Component {
       {/* <button><i className="fas fa-share-alt"></i> SHARE</button> */}
       </div>
     
-    const {conversation, likes, users, currentUser} = this.props;
+    const {conversation, likes, users, currentUser, currentGroup, groups} = this.props;
     
     const filteredLikes = likes.filter(like=>(
       like.conversation_id === conversation.id
@@ -105,9 +105,13 @@ class ConversationIndexItem extends React.Component {
         {filteredLikes.length}
         <span> {likesOrLike}</span>
       </div>; 
-
+    
+    const groupName = conversation.group_id ? 
+      groups[conversation.group_id].name : "All Company" ;
+    
     return (
     <li className="newsfeed-convo-item-li">
+      <h5><i className="fas fa-users"></i> {groupName}</h5>
       <div className="convo-item-div">
         <i className="fas fa-user-circle"></i>
         <div className="newsfeed-convo-item">
